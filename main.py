@@ -2,6 +2,8 @@ import json
 import math
 import os.path
 
+import gpt
+
 
 def news_headline_input_json_data_processor(inputFilePath):
     input_dict = {}
@@ -195,6 +197,11 @@ def main(task_name="news_headline", k=1):
     query_310_queryProfileDict = query_310["queryProfileDict"]
     query_310_BM25_result = BM25(query_310_input, query_310_queryProfileList, query_310_queryProfileDict)
     print(query_310_BM25_result)
+    query_310_selected_profile = []
+    for i in range(k):
+        profile_id = query_310_BM25_result[i][0]
+        query_310_selected_profile.append(query_310_queryProfileDict[profile_id])
+    query_310_gpt_result = gpt.gpt_process(query_310_input, query_310_selected_profile, task=task_name)
 
 
 
