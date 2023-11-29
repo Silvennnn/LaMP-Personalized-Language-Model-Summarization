@@ -1,31 +1,8 @@
 import time
 
 import requests
-import tiktoken
 
-def num_tokens_from_prompt(prompt):
-    encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
-    tokens = encoding.encode(prompt)
-    return len(tokens)
-
-def shorten_prompt_length(prompt, length):
-    satisfied = False
-    prompt_lst = prompt.split()
-    cur_length = len(prompt_lst)
-    while not satisfied:
-        encoding = tiktoken.get_encoding("cl100k_base")
-        tokens = encoding.encode(prompt)
-        print(tokens)
-        if len(tokens) <= length:
-            satisfied = True
-        else:
-            cur_length -= 1
-    shorten_prompt_lst = prompt_lst[:cur_length]
-    return ' '.join(shorten_prompt_lst)
-
-
-
-def gpt_api_send(prompt, temperature=0.7):
+def gpt_api_send(prompt, temperature=0.7, maxToken=None):
     # Set your OpenAI API key
     OPENAI_API_KEY = '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'
 
@@ -39,11 +16,19 @@ def gpt_api_send(prompt, temperature=0.7):
     }
 
     model = "gpt-3.5-turbo-instruct"
-    data = {
-        "model": model,
-        "prompt": prompt,
-        "temperature": temperature
-    }
+    if maxToken:
+        data = {
+            "model": model,
+            "prompt": prompt,
+            "temperature": temperature,
+            'max_tokens': maxToken
+        }
+    else:
+        data = {
+            "model": model,
+            "prompt": prompt,
+            "temperature": temperature,
+        }
     response = requests.post(url, headers=headers, json=data)
     time.sleep(2)
     return response.json()
@@ -56,10 +41,12 @@ def gpt_process(input_x, profiles=None, task=None):
     # print("-------- Input: {} -------- ".format(input_x))
     elif task == 'news_headline' or task == 'scholarly_title':
         prompt = gpt_title_generate_prompt_construct(input_x, profiles, task)
+        print("prompt:", prompt)
+        gpt_response = gpt_api_send(prompt)
     elif task == 'summary':
         prompt = gpt_summarize_prompt_construct(input_x)
-    print("prompt:", prompt)
-    gpt_response = gpt_api_send(prompt)
+        print("prompt:", prompt)
+        gpt_response = gpt_api_send(prompt, maxToken=512)
     print(gpt_response)
     response_text = str(gpt_response['choices'][0]['text']).replace("\n", "")
     # print("-------- GPT result --------")
@@ -95,19 +82,19 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
     return prompt
 
 def gpt_summarize_prompt_construct(text):
-    prompt = "Please summarize the following content: ".format(text)
+    prompt = "Please summarize the following content in about 100 words: ".format(text)
     return prompt
 
-def gpt_summarize_process(input_text):
-    prompt = gpt_summarize_prompt_construct(input_text)
-    print("prompt:", prompt)
-    gpt_response = gpt_api_send(prompt)
-    print(gpt_response)
-    response_text = str(gpt_response['choices'][0]['text']).replace("\n", "")
-    # print("-------- GPT result --------")
-    print(response_text)
-    # print("----------------------------")
-    return response_text
+# def gpt_summarize_process(input_text):
+#     prompt = gpt_summarize_prompt_construct(input_text)
+#     print("prompt:", prompt)
+#     gpt_response = gpt_api_send(prompt)
+#     print(gpt_response)
+#     response_text = str(gpt_response['choices'][0]['text']).replace("\n", "")
+#     # print("-------- GPT result --------")
+#     print(response_text)
+#     # print("----------------------------")
+#     return response_text
 
 # if __name__ == "__main__":
     # inputText = "nice to meet you"
