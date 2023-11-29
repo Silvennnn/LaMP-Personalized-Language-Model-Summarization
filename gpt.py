@@ -42,7 +42,7 @@ def gpt_process(input_x, profiles=None, task=None):
     elif task == 'news_headline' or task == 'scholarly_title':
         prompt = gpt_title_generate_prompt_construct(input_x, profiles, task)
         print("prompt:", prompt)
-        gpt_response = gpt_api_send(prompt)
+        gpt_response = gpt_api_send(prompt, maxToken=50)
     elif task == 'summary':
         prompt = gpt_summarize_prompt_construct(input_x)
         print("prompt:", prompt)
@@ -66,7 +66,7 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
             profile_line = '"{}" is the title for "{}"\n'.format(profile['title'], profile_text)
             prompt += profile_line
     elif task == "scholarly_title":
-        prompt = 'Generate a title for the following abstract of a paper: "{}"\nFor example, '.format(input_x)
+        prompt = 'Based on the example, generate a title for the following abstract of a paper: "{}"\nFor example, '.format(input_x)
         # prompt = "Generate a title for the following abstract of a paper: {}\n".format(input_x)
         for profile in profiles:
             profile_text = profile['text'].split()

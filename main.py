@@ -430,13 +430,18 @@ def main(task_name="news_headline", k=1, outputPath=None):
             # print(elements)
             queryID = elements[0]
             result = elements[1]
-            lib[queryID] = result
+            if result:
+                lib[queryID] = result
         outputFile.close()
         outputFile = open(outputPath, 'a')
         gpt_result_dict = {}
 
+        print("------------ BM25 Preprocessing Begin -----------")
         # BM25 Preprocess
         term_document_frequency_dict, collection_term_count, avg_document_length = BM25_preprocess_V2(train_input_data_dict)
+        print("collection total term count: {}".format(collection_term_count))
+        print("average document length: {}".format(avg_document_length))
+        print("------------ BM25 Preprocessing End -----------")
 
         for query_id, query_elements in train_input_data_dict.items():
             print("------------ Current Process: {} -----------".format(query_id))
@@ -444,7 +449,7 @@ def main(task_name="news_headline", k=1, outputPath=None):
                 print("{} already exist".format(query_id))
                 gpt_result_dict[query_id] = lib[query_id]
                 continue
-            query_input = query_task_generator(task=task_name, inputText=query_elements["queryInput"])
+            query_input = query_task_generator(task=task_name, inputText=query_elements["queryInput"]).replace('\n', '')
             query_ProfileList = query_elements["queryProfile"]
             query_ProfileDict = query_elements["queryProfileDict"]
             query_BM25_result = BM25_V2(query_input, query_ProfileList, query_ProfileDict, avg_document_length, term_document_frequency_dict, collection_term_count, task_name) # TODO: replace to dynamic
@@ -484,14 +489,14 @@ def main(task_name="news_headline", k=1, outputPath=None):
 if __name__ == "__main__":
     task = "scholarly_title" # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
     #  ************************* Title Prediction Task ****************************
-    # output_path = 'GPT_output'
-    # print("************ Task: {} Begin ************ ".format(task))
-    # main(task, 1, output_path)
-    # print("************ Task: {} End ************".format(task))
+    output_path = 'GPT_output'
+    print("************ Task: {} Begin ************ ".format(task))
+    main(task, 1, output_path)
+    print("************ Task: {} End ************".format(task))
 
 
     # ************************* Summary Generate Task ****************************
-    output_path = 'Data/summary/{}_summary'.format(task)
-    summarization_generate(task, output_path)
+    # output_path = 'Data/summary/{}_summary'.format(task)
+    # summarization_generate(task, output_path)
 
 
