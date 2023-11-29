@@ -1,7 +1,9 @@
 import json
 import math
 import os.path
+import time
 
+import evaluation
 import gpt
 
 
@@ -10,7 +12,9 @@ def news_headline_input_json_data_processor(inputFilePath):
     inputFile = open(inputFilePath, 'r')
     inputData = json.load(inputFile)
 
-    for _, element in enumerate(inputData):
+    for index, element in enumerate(inputData):
+        # if index == 1: # TODO: Remove
+        #     break
         queryId = element['id']
         queryInput = element["input"]
         queryProfile = element["profile"] # List of profile [{"text", "title", "id"}]
@@ -36,14 +40,25 @@ def news_headline_output_json_data_processor(outputFilePath):
     outputFile = open(outputFilePath, 'r')
     outputData = json.load(outputFile)["golds"] # List of query output [{"id", "output"} ... ]
 
-    for _, element in enumerate(outputData):
+    for index, element in enumerate(outputData):
+        # if index == 1: # TODO: Remove
+        #     break
         queryId = element['id']
         queryOutput = element["output"]
         output_dict[queryId] = queryOutput
     return output_dict
 
-def news_headline_query_generate(input):
-    query = "Generate a headline for the following article: {}".format(input)
+def query_task_generator(inputText, task):
+    if task == 'news_headline':
+        return news_headline_query_generate(inputText)
+    elif task == 'scholarly_title':
+        return scholarly_title_query_generate(inputText)
+    else:
+        print("Task Error")
+        return None
+
+def news_headline_query_generate(inputText):
+    query = "Generate a headline for the following article: {}".format(inputText)
     return query
 
 
@@ -52,7 +67,9 @@ def scholarly_title_input_json_data_processor(inputFilePath):
     inputFile = open(inputFilePath, 'r')
     inputData = json.load(inputFile)
 
-    for _, element in enumerate(inputData): # List of query [{"id", "input", "profile"}]
+    for index, element in enumerate(inputData): # List of query [{"id", "input", "profile"}]
+        # if index == 50:  # TODO: Remove
+        #     break
         queryId = element['id']
         queryInput = element["input"]
         queryProfile = element["profile"] # List of profile [{"title", "abstract", "id"}]
@@ -78,18 +95,20 @@ def scholarly_title_output_json_data_processor(outputFilePath):
     outputFile = open(outputFilePath, 'r')
     outputData = json.load(outputFile)["golds"]  # List of query output [{"id", "output"} ... ]
 
-    for _, element in enumerate(outputData):
+    for index, element in enumerate(outputData):
+        # if index == 50:  # TODO: Remove
+        #     break
         queryId = element['id']
         queryOutput = element["output"]
         output_dict[queryId] = queryOutput
     return output_dict
 
 
-def scholarly_title_query_generate(input):
-    query = "Generate a title for the following abstract of a paper: {}".format(input)
+def scholarly_title_query_generate(inputText):
+    query = "Generate a title for the following abstract of a paper: {}".format(inputText)
     return query
 
-def BM25_index_prepare(profiles):
+def BM25_index_prepare(profiles, task):
     """
     :param profiles: list of profile [{"text", "title", "id"} ... ]
     :return: index: dict {
@@ -108,8 +127,12 @@ def BM25_index_prepare(profiles):
     profile_length_dict = {}
     for profile in profiles:
         profile_id = profile["id"]
-        title = profile["title"]
-        text = profile["text"]
+        if task == "news_headline":
+            title = profile["title"]
+            text = profile["text"]
+        elif task == "scholarly_title":
+            title = profile["title"]
+            text = profile["abstract"]
         terms_lst = text.split()
         profile_length_dict[profile_id] = len(terms_lst)
         total_term_count += len(terms_lst)
@@ -128,8 +151,10 @@ def BM25_index_prepare(profiles):
     avg_profile_length = total_term_count / len(profile)
     return index, total_term_count, avg_profile_length, profile_length_dict
 
+def BM25_preprocess(profiles_lst, profiles_dict):
+    return None # TODO
 
-def BM25(query, profiles_lst, profiles_dict, k1=1.2, b=0.75):
+def BM25(query, profiles_lst, profiles_dict, k1=1.2, b=0.75, task=None):
     """
     :param profiles_dict: dict of profiles {profileID: {"text":str, "title": str}}
     :param b: int
@@ -139,7 +164,7 @@ def BM25(query, profiles_lst, profiles_dict, k1=1.2, b=0.75):
     :return: result: list of sorted tuples [(profileID, bm25 score)]
     """
     bm25_score_dict = {}
-    index, total_term_count, avg_profile_length, profile_length_dict = BM25_index_prepare(profiles_lst)
+    index, total_term_count, avg_profile_length, profile_length_dict = BM25_index_prepare(profiles_lst, task)
     for query_term in query.split():
         for profile in profiles_lst:
             profile_id = profile["id"]
@@ -190,24 +215,72 @@ def main(task_name="news_headline", k=1):
     print('Train_output_data: {}'.format(len(train_output_data_dict.keys())))
     print('----------- data loading completed ------------')
 
-    query_310 = train_input_data_dict["310"]
-    print(query_310.keys())
-    query_310_input = news_headline_query_generate(query_310["queryInput"])
-    query_310_queryProfileList = query_310["queryProfile"]
-    query_310_queryProfileDict = query_310["queryProfileDict"]
-    query_310_BM25_result = BM25(query_310_input, query_310_queryProfileList, query_310_queryProfileDict)
-    print(query_310_BM25_result)
-    query_310_selected_profile = []
-    for i in range(k):
-        profile_id = query_310_BM25_result[i][0]
-        query_310_selected_profile.append(query_310_queryProfileDict[profile_id])
-    query_310_gpt_result = gpt.gpt_process(query_310_input, query_310_selected_profile, task=task_name)
+
+    # print("GT:", train_output_data_dict["310"])
+    # query_310 = train_input_data_dict["310"]
+    # query_310_input = news_headline_query_generate(query_310["queryInput"])
+    # query_310_queryProfileList = query_310["queryProfile"]
+    # query_310_queryProfileDict = query_310["queryProfileDict"]
+    # query_310_BM25_result = BM25(query_310_input, query_310_queryProfileList, query_310_queryProfileDict)
+    # print(query_310_BM25_result)
+    # query_310_selected_profile = []
+    # for i in range(k):
+    #     profile_id = query_310_BM25_result[i][0]
+    #     query_310_selected_profile.append(query_310_queryProfileDict[profile_id])
+    # query_310_gpt_result = gpt.gpt_process(query_310_input, query_310_selected_profile, task=task_name)
+
+    outputFile = open("GPT_output", 'r')
+    lines = outputFile.readlines()
+    lib = {}
+    for line in lines:
+        elements = line.split('\t')
+        queryID = elements[0]
+        result = elements[1]
+        lib[queryID] = result
+    outputFile.close()
+    outputFile = open("GPT_output", 'a')
+    gpt_result_dict = {}
+
+    for query_id, query_elements in train_input_data_dict.items():
+        print("------------ Current Process: {} -----------".format(query_id))
+        if query_id in lib:
+            print("{} already exist".format(query_id))
+            continue
+        query_input = query_task_generator(task=task_name, inputText=query_elements["queryInput"])
+        query_ProfileList = query_elements["queryProfile"]
+        query_ProfileDict = query_elements["queryProfileDict"]
+        query_BM25_result = BM25(query_input, query_ProfileList, query_ProfileDict, task=task_name) # TODO: replace to dynamic
+        # print(query_BM25_result)
+        query_selected_profile = []
+        for i in range(k):
+            profile_id = query_BM25_result[i][0]
+            query_selected_profile.append(query_ProfileDict[profile_id])
+        query_gpt_result = gpt.gpt_process(query_input, profiles=query_selected_profile, task=task_name)
+        time.sleep(2)
+        gpt_result_dict[query_id] = query_gpt_result
+        line = str(query_id) + '\t' + query_gpt_result + '\n'
+        outputFile.write(line)
+
+    # print("------------ Begin Evaluation -----------")
+    # ROUGE_1, ROUGE_L = evaluation.evaluation(train_output_data_dict, gpt_result_dict)
+    # print("ROUGE_1: {}".format(ROUGE_1))
+    # print("ROUGE_L: {}".format(ROUGE_L))
+    # print("------------ End Evaluation -----------")
+
+    print("------------ Begin Evaluation -----------")
+    result = evaluation.evaluation(train_output_data_dict, gpt_result_dict)
+    print("ROUGE_1: {}".format(result["rouge-1"]))
+    print("ROUGE_L: {}".format(result["rouge-L"]))
+    print("------------ End Evaluation -----------")
+
+
 
 
 
 
 if __name__ == "__main__":
-    task_name = "news_headline" # news_headline or scholarly_title
+    # task_name = "news_headline" # news_headline or scholarly_title
+    task_name = "scholarly_title" # news_headline or scholarly_title
     print("************ Task: {} Begin ************ ".format(task_name))
-    main(task_name)
+    main(task_name, 1)
     print("************ Task: {} End ************".format(task_name))
