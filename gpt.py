@@ -30,7 +30,7 @@ def gpt_api_send(prompt, temperature=0.7, maxToken=None):
             "temperature": temperature,
         }
     response = requests.post(url, headers=headers, json=data)
-    time.sleep(2)
+    # time.sleep(2)
     return response.json()
 
 
@@ -39,7 +39,7 @@ def gpt_process(input_x, profiles=None, task=None):
         print("Task Error")
     # print("-------- Sending GPT Request --------")
     # print("-------- Input: {} -------- ".format(input_x))
-    elif task == 'news_headline' or task == 'scholarly_title':
+    elif task == 'news_headline' or task == 'scholarly_title' or task == 'news_headline_summary' or task == 'scholarly_title_summary':
         prompt = gpt_title_generate_prompt_construct(input_x, profiles, task)
         print("prompt:", prompt)
         gpt_response = gpt_api_send(prompt, maxToken=50)
@@ -47,6 +47,8 @@ def gpt_process(input_x, profiles=None, task=None):
         prompt = gpt_summarize_prompt_construct(input_x)
         print("prompt:", prompt)
         gpt_response = gpt_api_send(prompt, maxToken=512)
+    else:
+        print("Task Undefined")
     print(gpt_response)
     response_text = str(gpt_response['choices'][0]['text']).replace("\n", "")
     # print("-------- GPT result --------")
@@ -55,8 +57,9 @@ def gpt_process(input_x, profiles=None, task=None):
     return response_text
 
 def gpt_title_generate_prompt_construct(input_x, profiles, task):
-    if task == "news_headline":
-        prompt = 'Generate a headline for the following article: "{}"\nFor example, '.format(input_x)
+    if task == "news_headline" or task == "news_headline_summary":
+        # prompt = 'Generate a headline for the following article: "{}"\nFor example, '.format(input_x)
+        prompt = '{}\nFor example, '.format(input_x)
         # prompt = "Generate a headline for the following article: {}\n".format(input_x)
         for profile in profiles:
             profile_text = profile['text'].split()
@@ -65,8 +68,10 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
             profile_text = ' '.join(profile_text)
             profile_line = '"{}" is the title for "{}"\n'.format(profile['title'], profile_text)
             prompt += profile_line
-    elif task == "scholarly_title":
-        prompt = 'Based on the example, generate a title for the following abstract of a paper: "{}"\nFor example, '.format(input_x)
+    elif task == "scholarly_title" or task == "scholarly_title_summary":
+        # prompt = '{}\nFor example, '.format(input_x)
+        prompt = 'For example, '
+        # prompt = 'Based on the example, generate a title for the following abstract of a paper: "{}"\nFor example, '.format(input_x)
         # prompt = "Generate a title for the following abstract of a paper: {}\n".format(input_x)
         for profile in profiles:
             profile_text = profile['text'].split()
@@ -79,6 +84,9 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
             profile_text = ' '.join(profile_text)
             profile_line = '"{}" is the title for "{}"\n'.format(profile['title'], profile_text)
             prompt += profile_line
+        prompt = prompt + '\n{}'.format(input_x)
+    else:
+        print("Task Undefined")
     return prompt
 
 def gpt_summarize_prompt_construct(text):

@@ -4,3 +4,12 @@ bm25-v1 -> GPT_output_BM25_version_1
 ROUGE_1: 0.3633015134183687
 ROUGE_L: 0.29428921892238147
 **************************************************************
+scholarly_title with all abstract
+bm25-v2 -> GPT_output_BM25_version_2
+ROUGE_1: 0.3654904314309864
+ROUGE_L: 0.29811562930171853
+**************************************************************
+scholarly_title summary k=1
+bm25-v2 -> GPT_output_summary_k=1
+ROUGE_1: 0.30109856061921003
+ROUGE_L: 0.24472979122940006

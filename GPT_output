@@ -1,620 +1,100 @@
-410	Very Sparse Stable Random Projections: Improving Efficiency and Accuracy for Data Streaming and Machine Learning
-411	The Dual Role of the Eyes: Sensor and Browser of the Brain's Cognitive Mechanisms
-412	
-413	Efficient Algorithms for Solving Linear Fractional Function Optimization Problems in Two Dimensions with Applications in Computational Geometry
-414	Optimizing Multi-Hop Wireless Networks with Topology Control and Network Coding
-415	The Power and Limitations of Fan Filtering for Moving Objects: A 3-D Radon Transform Approach
-416	Optimizing Network Capacity and Device Energy Efficiency through Beamsteering on Mobile Devices
-417	IQ Estimation for Enhanced Time Series Classification: A Fusion Approach for Improved Accuracy
-418	Attribute-guided Clothing Retrieval: A Dual Network Approach for Cross-domain Image Retrieval
-419	Efficient Reporting of Intersecting Objects in Axis-Aligned Query Ranges: A Study on Data Structures for 2D and 3D Objects
-4110	Efficient Multi-Person Tracking Using Two-Stage Graph-Based Object Detection in Complex Visual Surveillance Scenarios
-4111	Enhancing Concurrency Verification: A Comparative Study of JPF 2 and Other Tools for Detecting Deadlocks in Concurrent Java Programs
-4112	Maximizing Efficiency: Approaches and Challenges in Optimal Assembly Sequence Selection for Complex Products
-4113	Efficient and Scalable Federated Simulation of Large Networks using Runtime Infrastructure
-4114	 Exploring Single Image Defogging Methods through a Color Ellipsoid Framework
-4115	D-Clock: A Distributed Algorithm for Fair Bandwidth Allocation in Heterogeneous Distributed Storage Systems
-4116	Collaborative Intrusion Detection: Leveraging Complex Event Processing for Inter-domain Port Scan Detection in Critical Infrastructure
-4117	Optimizing Tune-In Time and Quality for Mobile TV with Spliced Video and Buffering in DVB-H
-4118	Optimizing Caching-Aided Coded Multicasting with Multiple Independent Requests in a Shared Link Network 
-4119	Maximizing Spectral Efficiency in Distributed Cooperative Multiantenna Communication: Analysis and Design Framework
-4120	Exploring the Frontiers of Decidability: Novel Techniques for Reachability Problems in Piecewise Affine Maps
-4121	Exploring the Limits of Connected Graph Searching: Monotone Strategies, Tight Bounds, and the Price of Connectivity
-4122	Selective Placement for High-Coverage Fault Detection in Low-Cost Memory Protection
-4123	Uncovering the Influence of Dense Flows on Small-Time Scaling Behavior of Internet Backbone Traffic
-4124	Optimizing Cooperative Congestion Control: Techniques and Algorithms for Identifying and Managing Congestion in Network Flows
-4125	MSPlayer: A Multi-Source, Multi-Path Solution for High Quality Mobile Video Streaming
-4126	Driving the Future of Internet Protocols and Services: The Role of Economic and Social Sciences
-4127	Efficient Key Management for Secure Multicast Communication in Broadcast Networks
-4128	Integrating Wearable Textile Platform and Cloud Computing for Enhanced Patient Fall Detection and Emergency Response in Pervasive Healthcare
-4129	ForeGraph: A Multi-FPGA Architecture for High-Performance Large-Scale Graph Processing
-4130	Efficient Heuristics for Large-scale Plant Location Problems: An Aggressive Reduction Approach
-4131	Optimizing Graph Generation Algorithms for Various Distributions: A Study of Complexity and Optimality Criteria
-4132	Enhancing Multi-User Downlink Transmission with Statistical CSI in MU-MIMO Systems: Algorithms and Applications
-4133	Maximizing Performance and Efficiency: Implementing Native Double Precision Arithmetic on a Hybrid Reconfigurable CPU
-4134	Integrating Data Sources for Enhanced Clustering: A KL Approach
-4135	Exploring Unlabeled Data with Semi-Supervised Orthogonal Discriminant Analysis via Novel Label Propagation
-4136	Uncovering the Complexities of Multi-Threaded Workload Synthesis for Efficient Architecture Design Evaluation
-4137	Maximizing Performance and Efficiency in Cooperative Coding with M-ary Modulation and Repetitive Information Transmission
-4138	Efficient Nonsmooth Optimization for Optimal Transmitter Beamforming in Cognitive Multicast Transmission
-4139	Improving Natural Interaction in Text Entry Research: A Novel Levenshtein-based Technique and its Methodological Implications
-4140	Exploring the Effects of Stereo Display Limitations on 3D Pointing in Peri-Personal Space
-4141	W-Boost: Boosting-Based Traffic Prediction Using 'Stump' and Piece-wise-Constant Functions
-4142	Exploring High-Order Network Structures: A Local Algorithm for Efficient Graph Mining
-4143	Automated Defect Correction: Utilizing Relational Concept Analysis for Refactoring in Software Engineering
-4144	Managing Actor Disappearance in Social Networks: A Role-Based Approach
-4145	Efficient Domination-based Approach for Solving the 0-1 Multi-Objective Knapsack Problem: A Dynamic Programming Perspective
-4146	Characterizing Hamiltonian Paths and Cycles in Toeplitz Graphs: A Forbidden Induced Subgraph Approach
-4147	
-4148	Strengthening the LYM Inequality for Sperner Families: An Indexed Family Approach
-4149	Extending Recursive and Cyclotomic Constructions for External Difference Families and Disjoint Difference Families
-4150	Adaptive Motion Compensated Temporal Filtering with Nonlocal Prior Knowledge for Improved Compression in Video Coding
-4151	Efficient and High-Performance Image Coding for Many-Core Computers Using Line-by-Line Sequential Compression and Intra Predictions
-4152	Optimizing Performance Metrics in Cache-Enabled Dense Small Cell Networks using Generalized Benders Decomposition
-4153	Optimizing Real-Time Video Transmission over Wireless Channels with Delay-Constrained Adaptive QoS Control
-4154	Novel Nonlinear Circuits with All-Positive Pinched Hysteresis Loop: Simulation and Analysis
-4155	 Uncovering Software Bugs with CMC: A Case Study of AODV Routing Protocol and Linux TCP/IPv4 Stack
-4156	Designing a Rule-Based System for Contextualized Decision Making in Policing
-4157	Optimizing Performance in Multicluster Systems through Processor Co-allocation: A Simulation-based Study
-4158	Advancing Grid Computing: A Comprehensive Performance Evaluation Framework Using GRENCHMARK
-4159	 Integrating Hierarchical Bayesian Framework and Topic Modeling for Improved Pair-wise Ranking in Recommender Systems
-4160	Maximizing Performance with DySER: An FPGA Implementation and Performance Evaluation of the Integration of DySER into OpenSPARC 
-4161	RPEM: A Novel Embedding Model for Cross-Domain Recommendation in Cyber-Physical Systems
-4162	Enhancing Spanish Question Answering with Lexical Context: A Prototype from INAOE's Language Technologies Laboratory
-4163	Improving Patent Retrieval with Stylistic Adaptations: Insights from NLE Lab's Work at CLEF-IP 2009
-4164	Enhancing Spanish Question Answering with Lexical Context and Pattern Recognition: A Prototype from the INAOE Language Technologies Laboratory
-4165	Efficiency-Driven Lattice and Algebraic Coding for Multi-User Gaussian Interference Channels
-4166	Unleashing the Power of Temporal Coherence: A Neural Network Approach for Task-Specific Focus of Attention in Autonomous Vehicles
-4167	Exploring Hereditary Harrop Formulas: A Specification Language for Security Protocols and Case Study on Needham-Schroeder Protocol
-4168	Adaptive Backtracking Matching Pursuit for Improved Signal Recovery in Joint-Sparse Signal Ensembles Using Partially Known Support
-4169	Real-Time Landmine Detection Using Ground-Penetrating Radar and Adaptive Techniques
-4170	Enhancing Depth Maps with Adaptive Steering Kernel Regression and Distance Transform Weighting
-4171	Intelligent Object Tracking and Obstacle Avoidance using Mobile Robots and Dynamic Goal Potential Field Algorithm
-4172	Rational Parameterization for Stabilization of Saturated Linear Systems: A Sum-of-Squares Approach 
-4173	Enhancing Epidural Anesthesia: A Novel Augmented Reality System for Precise Needle Placement Using 3D Ultrasound and Multi-Vertebrae Statistical Shape+Pose Models
-4174	Unsupervised Text Summarization Using Document-Specific Word Associations: A Multilingual Approach
-4175	Optimizing VM Startup in IaaS Clouds through VM Image Content Consolidation and Caching
-4176	Flocking Dynamics: A Model for Emergence and Consensus
-4177	Optimizing Parallel Simulation Performance through Dynamic Core Frequency Control on Many-Core Processors
-4178	Automated Generation of Posynomial Response Surface Models for Analog Integrated Circuits Using Design of Experiments and Response Surface Modeling
-4179	Efficient Generation of Related Work Sections Using Citation-Based Summarization
-4180	Streamlining Flip-Chip Design: A Fast Heuristic Algorithm for Optimal Pin Assignment and Routing in Chip-Package Co-Design 
-4181	Maytag: A User-Centered Approach to Visualizing Uncertainty in Realtime Transit Predictions on Mobile Devices 
-4182	Comparing String Distance Metrics for Entity Name Matching: A Hybrid TFIDF and Jaro-Winkler Approach
-4183	Exploring Apprenticeship Learning: A Polynomial Approach to Inverse Reinforcement Learning in Unknown Dynamic Systems
-4184	Exploring the Universality and Minimality of Nondeterministic Automata through Ehrenfeucht–Fraı̈sse-like Games and Simulations
-4185	Active Clustering and Network Analysis for Social Group Identification in Video Clips
-4186	Quarnet: An Efficient Approach for Quantifying and Verifying Network Reachability in Access Controlled Networks
-4187	Cooperative Memetic Algorithms for Optimizing Tool Switching in Flexible Manufacturing: A Comparative Study
-4188	Exploring the Role of Key Escrow in MANETs: Adversary Models and Limitations of Identity-Based Cryptography
-4189	Quantifying Privacy Loss: An Integrated Model for Multi-Channel Inference in Video Surveillance
-4190	Efficient 3D Video Acquisition and Rendering Using Point-Sampled Approach and Structured Light Patterns
-4191	Enhancing 3D Cardiac Beat Visualization using Active Stereo with Waved-Grid Pattern Projection and Signed Distance Fields
-4192	Tracking Trends and Gaining Competitive Intelligence in Neuroscience: An Ontology-Based Mining System for Decision Making and Discovery
-4193	Revealing Correlations in Multi-Label Classification: The Correlated Labeling Model Approach
-4194	Breaking the Synaptic Dogma: Evolving Neuro-inspired Developmental Networks for Adaptive Learning in Checkers
-4195	Efficient Construction of SIM-RSO-CCA Secure PKE Schemes from Standard Assumptions
-4196	Uncovering Network Structure and Optimizing Routing Control in ISP Topologies: A Realistic Modeling Approach
-4197	Decoding Long-Lasting Botnet Spam Campaigns: Patterns, Implications, and Countermeasures
-4198	Optimizing Virtual Network Embedding: A Dynamic and Customized Approach for Improved Resource Allocation
-4199	Efficient Traffic Flow Measurement Using Space-Code Bloom Filter: A Novel Technique for Per-Flow Traffic Analysis
-41100	Maximizing Permissiveness: A Novel Approach to Behavioral Model Adaptation for Non-Deterministic Systems in Modal Logic
-41101	Exploring the Relationship between Covering-based Rough Sets and Boolean Matrix Decomposition
-41102	Securing Quantum Key Distribution: A Novel Approach Using Fainted Pulses and QPSK Format with EM Side Channel Characterization
-41103	Improving Near Duplicate Image Retrieval with Coherent Codebook Generation: A Novel Approach
-41104	Uncovering Hidden Gems: Leveraging Domain Knowledge for Interestingness Analysis of Association Rules
-41105	Enhancing Multi-Agent Reinforcement Learning with Expert Coordination Knowledge: A Decentralized Approach for Dynamic Communication Structures
-41106	Enhancing Cooperative Coevolution with Guided Mutations: A Comparative Study on Nine Problem Domains
-41107	Maximizing Energy Efficiency and Performance in Linear Algebra Libraries with GreenLA
-41108	From Global Solutions to Local Impact: Designing Participation in Community Change Initiatives Through Mobile Social Software
-41109	Exploring Feasible Design Spaces of Dataflow Programs through Homotopy Theory and Guard Dependencies Analysis
-41110	Reconfigurable Object Architecture: Enabling Robots to Navigate Narrow Doorways Using High-Level Goals and Sensor Knowledge
-41111	Unlocking the Power of Web Usage Mining for Scalable and Accurate Personalization: A Comparative Analysis of Aggregate Profile Techniques
-41112	Optimizing Time-Delay Estimation in Reverberant Environments: A Statistical Analysis Approach
-41113	Efficient Modulo M Translation for Prime Memory Systems: A Simplified Approach Using Generalized 'Casting Out Nine' Rule
-41114	Maximizing Efficiency: Evaluating the Benefits of Area-Oriented DAG-Scheduling for Multi-Threaded Computations
-41115	Adaptive Locality Weighted Multisource Joint Sparse Representation Classification for Multisensor Geospatial Data
-41116	Efficient Algorithms for Mobile Guard Coverage in Various Grid Environments
-41117	Flexible Granularity in Hardware/Software Partitioning: A Comprehensive Approach for Efficient Embedded System Design
-41118	Efficient Obstacle-Avoiding Steiner Tree Construction with Edge-Based Heuristics and Fast Minimum Terminal Spanning Trees
-41119	Enhancing Neural Network Accuracy and Interpretability with Discretized Input Augmentation and Pruning
-41120	Advancements in Quadrilateral Mesh Generation and Processing: A Comprehensive Survey
-41121	Efficient Interactive Editing of Large Point Clouds Using an Out-of-Core Multi-Resolution Data Structure
-41122	Efficient and Interactive Rendering of Large Tetrahedral Meshes Using Segment-Based Multi-Triangulation
-41123	Optimizing SFN Gain: Investigating the Influence of Handover Mechanisms and Transmission Delay Differences in Digital Broadcast Networks 
-41124	Maximizing Throughput in Wireless LANs: A Surrogate Model Approach for Optimizing IEEE 802.11 Performance
-41125	Optimizing Uplink MIMO Systems with Antenna Correlation through CCIT-Based Encoder-Precoder Design and EXIT Chart Matching
-41126	Efficient Algorithms for Distance and Clustering Problems in Benzenoid Systems
-41127	Enhanced Face Recognition Using Sparse Fast Fourier Transform-Based Feature Extraction and Compressive Sensing Classification
-41128	Granular Computing: Approximate Reasoning and Information Changes
-41129	Breaking NOEKEON: A Side Channel Cube Attack on the NESSIE Block Cipher
-41130	Optimizing Online Video Preview Frames: A Classification Approach Using Informativeness, Attention, and Aesthetics
-41131	Exploring User Adoption and Utilization of Personal RFID Data Management Tools in a Building-Scale Ecosystem
-41132	Efficient Augmenting Path Selection for Bipartite Matching in Undirected Graphs
-41133	Co-Utility: Enhancing Ethical Concerns in the Information Society through FuturICT
-41134	Improving Knowledge Acquisition and Usage with Meta-Level Assessment: A Novel Extension to Existing Tools
-41135	Exploring Hardware Support for Transactional Memory: A Comprehensive Benchmark Suite for Scalable and Realistic Applications
-41136	Solving the Circuit Value Problem with Language Equations and Grammars
-41137	Exploring Paraconsistent Reasoning: A Comprehensive Study of Nelson's Logic N4 and its Proof Systems
-41138	Exploring Decidability in Non-Monotonic Protection Systems: A Study of the Dynamic-Typed Access Matrix Model
-41139	Maximizing Efficiency: A Comparative Analysis of Resource Selection Models for Outsourcing in Today's Economic Reality
-41140	Recognizing Rational Tree Series with Cauchy Unital Tree Valuation Monoids and Weighted Tree Automata
-41141	Enhancing Network Resilience through GeoPath Diversity: A Study of Vulnerability and Routing Heuristics in Optical Networks 
-41142	Efficient Summarization of Transactional Databases Using Hyperrectangles and Set Covering
-41143	Development and Control of a Dual-Axis Planar Magnetic Levitation Positioning System with Micrometer Precision and Large Moving Range
-41144	Proactive Adaptation: Addressing Challenges in Online Quality Prediction for Service-Oriented Systems
-41145	Optimizing Mobile Data Gathering in Wireless Sensor Networks with Energy Replenishment and Anchor-point Selection 
-41146	Unconditional Convergence: Comparing 2-Choices and 3-Majority Consensus Processes with Many Initial Colors
-41147	Maximizing Centrality: A Greedy Approach to Improving Betweenness and Ranking in Networks
-41148	Exploring the Complexity and Approximability of Cut Packing in Undirected Graphs: Algorithms and Dual Problems
-41149	
-41150	Optimizing Resource Distribution for Cyber-Physical Systems: A QoS-Based Approach
-41151	Optimizing Overlay Topology in P2P-TV Systems: A Comprehensive Experimental Comparison Using PeerStreamer
-41152	 Optimizing Intrusion Detection Systems: A Feature Selection Approach 
-41153	Enhancing Intrusion Detection Systems with Hybrid Machine Learning Approaches: A Comparative Analysis using Decision Tree-Support Vector Machine Hierarchical Model and Ensemble Method
-41154	Mitigating Sybil Attacks in Decentralized Networks: A Comprehensive Analysis and Proposed Solution 
-41155	 Enhancing Biometric System Performance with Distributed Computing: A Case Study Using Voice Recognition on the CMU Database 
-41156	Efficient Backward Gradient Computation for Dynamic Systems using Signal-Flow-Graph Representation: A Case Study on Recurrent Neural Networks
-41157	Enhancing Manual Reviews in Function-Centered Engineering of Embedded Systems: The Role of a Dedicated Review Model
-41158	Maximizing Extensibility in Controller Area Networks for Automotive Applications
-41159	Enhancing Sketching Skills: Utilizing Haptic Interface for Virtual Guidance and Feedback
-41160	Unlocking Pen-Input on Smartphones: A Novel Approach Using Gyroscopes and Accelerometers for Handwriting Recognition and Text Entry
-41161	Fluid Annotation: An Efficient Human-Machine Collaboration Interface for Image Annotation
-41162	Improving Software Development with Quality of Service-Based SCM: A Novel Approach
-41163	Enhancing Gamer Profiles: A Framework for Capturing and Storing Context Information in Online Gaming Communities
-41164	Efficient Pattern Detection in Software Engineering Using Semantic and Structural Metrics
-41165	Designing for Success: The Role of Usability in Modern Medicine and Healthcare
-41166	Exploiting Local Knowledge for Energy-Efficient Routing in Wireless Sensor Networks: The Case of Locally-Optimal Source Routing (LOSR)
-41167	 Robust Stability Analysis of Interval Dynamic BAM Neural Networks with Time Delays
-41168	Designing Interactive Lifelogging Interfaces for Older Users: Lessons Learned and Future Considerations
-41169	Enhancing Temporal Reasoning: A Novel Approach for Event and Timex Extraction in Clinical Narratives
-41170	Fuse: A Visual Context-Guided Spoken Language Generation System for Semantic Understanding
-41171	Enhancing Security in Conceptual Multidimensional Modeling for Data Warehouses: A Model-Driven Approach
-41172	Enhancing Global Business Performance through Information Quality Management: The Development and Implementation of IQMF and MAIMIQ
-41173	Enhancing Contextual Advertising with Wikipedia Thesaurus Knowledge: A Novel Matching Approach for Improved Relevance and Performance
-41174	Efficient Scheduling for Precedence-Constrained Jobs on Uniformly Related Machines: An EPTAS Approach
-41175	The Race to Re-Register: An Empirical Analysis of Post-Expiration Domain Ownership Changes and Controversial Practices in the Domain Name Ecosystem
-41176	AccessMiner: A System-Centric Approach to Detecting Malware in Diverse Computing Environments
-41177	Detecting Taint-Style Vulnerabilities in Web Applications: A Comprehensive Static Analysis Approach
-41178	Efficient Music Retrieval Using Temporal Sequences and String-Based Representations
-41179	
-41180	Efficient Interference Management in Femtocell Networks Using Single-Tone Signaling: A Novel Solution for QoS and Fairness
-41181	Exploring Geometric Similarity Measures for General Type-2 Fuzzy Sets: A Comprehensive Analysis and Novel Approach Using Jaccard Measure
-41182	Exploring Novel Weighted Averages in Computing with Words: Implications for Multicriteria Decision Making and Uncertain Probabilities
-41183	
-41184	FuzzyLogic: A Novel Approach for Assessing and Providing Affective Feedback in Online Collaborative Learning Environments
-41185	A Fuzzy-Based Algorithm for Cluster-Head Selection in Sensor Networks Using Node Movement 
-41186	CoSMIC: A Model-Driven Approach to Developing and Managing QoS-Enabled Distributed Real-Time and Embedded Systems
-41187	Efficient SAT Solving for Termination Analysis of Term Rewrite Systems
-41188	Optimal and Suboptimal Joint Tx/Rx FDE for Single-Carrier Incremental Relaying: Maximizing Throughput with Limited CSI 
-41189	Utilizing Affiliation Networks for Collaborative Filtering in E-Learning: A Case Study Analysis
-41190	The ACL Anthology Network: A Comprehensive Look at Citation, Collaboration, and Summary Data in Computational Linguistics
-41191	Optimizing Grasping Quality: A Sensor-Based Approach for Robotic Hands
-41192	Improved Differential Fault Analysis of Grain Family Stream Ciphers Using Probabilistic Signatures
-41193	Uncovering Customer Segmentation Similarities and Differences for Enhanced Satisfaction: A Hybrid Approach using Statistical Measures and Visualization Techniques
-41194	Exploring the Use of NEFCON-Model for Adaptive Neuro-Fuzzy Control in Nonlinear Systems: A Numerical Approach 
-41195	Enabling Interoperability and Knowledge Sharing in Cloud Federations: A Multi-Agent SLA Negotiation Protocol
-41196	Efficient and Fault-Tolerant Flocking for Multirotor UAV Aerial Surveys
-41197	Enhancing Web Server Performance and Modularity Through Aspect-Oriented QoS Implementation 
-41198	
-41199	Efficient Computation of Lower Bounds for Global Linear Complexity in Nonlinear Filter Generators
-41200	Advancements in Knowledge-Based Programs: Incorporating Noisy Sensors and Actions into the Situation Calculus
-41201	Fuzzy Rule Firing: A Measure-Based Approach for Uncertain Attribute Values in Relationships
-41202	Efficient Format-Compliant Selective Encryption for Visual Protection of HEVC Video Codec
-41203	Efficient Solutions for Generalized Computational Geometry Problems on Planar Polygons: Monotonicity, Locality, and Selection Functions
-41204	Enhancing Argumentation in Education: Evaluating the Reliability of Computational Diagram Models
-41205	Exploring the Impact of LARGO on Argumentation Skills in a Real-World Classroom Setting
-41206	Exploring the Impact of Strategy Diversity in Intelligent Tutoring Systems for Legal Argumentation Training
-41207	Topological Insights on Copositive Programming for Quadratic Optimization Problems
-41208	Efficient Population Game Dynamics for Quadratic Optimization in Computer Vision Applications 
-41209	Efficient Kernel Scheduling for Parallel Applications on Shared-Memory Multiprocessors: A NANOS Environment Study
-41210	Unraveling the Longest Common Rigid Subsequence Problem: NP-Hardness and Approximation Algorithms
-41211	Unleashing the Power of Geospatiotemporal Annotations: A Comprehensive Approach for Conceptual Database Design
-41212	Formal Specification and Verification of Oscilloscope Architectures using Z Notation
-41213	Revolutionizing Rule-Based Systems: Parallel Execution with DBCond
-41214	Efficient Approximation Algorithms for L(h, k)-Labeling on Bipartite, S-Partite, and General Graphs
-41215	Maximizing Operational Continuity: A Business Model-Based Approach to IS Risk Analysis
-41216	Enhancing Soft-Decision Decoding of Linear Block Codes with Preprocessing and Multibasis Reprocessing: Simulation Results and Performance Analysis
-41217	Optimizing Pattern Recognition Performance with an Adapted Ergodic HMM Vector Representation and Distance Metric Learning
-41218	COOL Strategies for Efficient Clustering of Numerical Data with Minimum Code Length Scoring
-41219	Game-Theoretic Strategies for Efficient and Effective Intrusion Detection in Mobile Ad Hoc Networks
-41220	Exploiting Concurrency Control: Solving the Challenges of Site Initialization, Recovery, and Backup in Distributed Database Systems
-41221	STEPS: A 3D Visualization Tool for Managing Complex Electric Power Systems with Renewable Energy and Flexible Loads
-41222	Exploring Bioinformatics Databases: Image Mining and Navigation with C-DEM
-41223	Preserving Privacy and Quality: A Novel Approach to Testing Database-Centric Applications
-41224	Addressing the Challenges of Traceability in Emerging Software Engineering: TEFSE 2009
-41225	Efficient Algorithms for Partial Monitoring with Heteroscedastic Noise: A Frequentist Approach
-41226	
-41227	
-41228	Enhancing the Semantic Web with Conceptual Spaces: A Geometric Approach to Cognitive Plausibility and Knowledge Representation
-41229	Streamlining Fault Management: A Three-Tier Rule Discovery Framework for Efficient Fault Location in Global Telecommunication Systems
-41230	Sparse Representation of Incomplete RTF Measurements for Improved Attenuation in Microphone Arrays
-41231	Unlocking the Power of Feedforward: A Framework for Bridging Norman's Gulf of Execution in Interaction Design
-41232	Exploring the Impact of Communication and Input Devices on Collaboration in Virtual Environments: A Case Study in Puzzle-Solving Tasks
-41233	Integrating Security Models and Policies in Model-Driven Development for High Assurance Software Systems: An Empirical Framework and Proof-of-Concept Prototype
-41234	Empowering Network Security in Dynamic OpenFlow-based Networks: Introducing FlowGuard
-41235	Optimizing Battery Performance in Portable Systems through Adaptive Thermal Management with Forced Convection Cooling
-41236	Refining Non-Negative Matrix Factorization for Robust Polyphonic Transcription Using Phase Cancellation-Aware Techniques 
-41237	Enhancing Urban Object Detection through Informative SIFT Descriptors in Mobile Vision
-41238	Towards a Comprehensive Maturity Model for Business-IT Alignment in Inter-Enterprise Collaborations: A Multi-Method Validation Approach
-41239	Advancing Design Science: A Framework for Problem-Solving and Solution Justification
-41240	Protecting FPGA Designs from Post-Manufacturing Attacks: Identification and Obfuscation of Hardware Trojans Targeting Cryptographic Primitives
-41241	Optimizing Time-Dependent Project Scheduling using a Time Wave Neural Network Framework
-41242	Revolutionizing Data Analysis: A Dynamic Approach for Big Data Searching in Social Networks
-41243	Improving Phonemic Class Detection in Greek and American-English Speech with an Implicit Approach
-41244	Optimizing Phone Duration Modeling for Emotional Speech Synthesis: Investigating the Impact of Feature Selection Techniques on Machine Learning Algorithms 
-41245	Balancing Imbalanced Data in Linguistic Applications: A Bayesian Approach
-41246	Efficient Ontology Maintenance for Collaborative Product Development in HLA-based Systems
-41247	Uncovering Task-Assignment Mechanisms in Free/Libre Open Source Software Development: A Case Study Analysis 
-41248	Efficient and Resilient Overlay Network Maintenance with Z-Ring: A Decentralized and Cost-Effective Approach
-41249	Resilient Routing Reconfiguration: A Novel Scheme for Efficient and Robust IP Network Operations
-41250	Design and Implementation of a Wireless Mesh Network Testbed for Rural Mountain Areas
-41251	PhotoMap: Utilizing Spontaneously Taken Images of Public Maps for Multi-Modal Navigation Tasks on Mobile Devices 
-41252	Enhancing the Identification of Reading Disorders in Children through Automated Speech Processing Techniques
-41253	Optimizing Data Sharing in Large-Scale Shared Memory Multiprocessors: An Analysis of Hardware Implementations for Atomic Primitives
-41254	Complexity Analysis of Branch-and-Cut Algorithms for 0-1 Integer Programming with Lifted-Cover Inequalities: A Knapsack Instance Study
-41255	Efficient Parameter Estimation for Multivariate Pseudo-Linear Systems Using Decomposition-Based Recursive Least Squares and Multi-Innovation Theory
-41256	Optimizing Transport Protocol Performance in 4G Satellite Links: A Cross-Layer Approach using Real Physical Traces and Network Simulation
-41257	Optimizing Defragmentation for Partially Reconfigurable FPGAs: A Graph-Theoretic Approach
-41258	Enhancing Robustness of 3D Model Watermarking Through Vertex Selection and Generic Algorithm Implementation
-41259	Assessing Parametric Models for Correcting Thermal Radiation Anisotropy: Evaluation and Application to Land Surface Temperature Estimation
-41260	Optimizing Join Algorithms in Object-Oriented Databases Using Path Indexes
-41261	Temporal Rule Induction: A Novel Approach for Clinical Outcomes Analysis and Insight Mining in Cancer Patients
-41262	Maximizing Efficiency and Personalization in Car Applications Through Voice Recognition and User Identification
-41263	Advanced Vision System for Single Person Tracking in Smart Rooms: A Dynamic Programming and Adaptive Subspace Learning Approach
-41264	Enhancing User Engagement and Driving Behavior Data Collection through Collaborative Virtual Environments: A Case Study of the iCO(2) Game
-41265	Axiomatic Analysis of Task-Oriented Negotiation Problems: Unifying Classical Solutions and Dual-Process Maximization
-41266	Efficient Receiver Design for Bluetooth Systems: Noncoherent Sequence Detection and Per-Survivor Processing Viterbi Decoding
-41267	Modeling Multi-Server Queues with Generalized Exponential Service Times and Markov Modulated Compound Poisson Arrivals 
-41268	Intelligent Adaptation for Universal Multimedia Access: Leveraging Semantic Web Services for Automated Media Transformation
-41269	Closing the Gap: Enhancing E-commerce Platforms with Cost-Efficient Virtual Sales Assistants
-41270	Evolutionary Synthesis of Multi-Agent Normative Systems: A Framework for Coordinating Complex Interdependent Activities
-41271	Optimizing Data Gathering in Wireless Sensor Networks with Mobile Sinks: A Novel Autonomous Moving Strategy for Improved Energy Efficiency and Scalability
-41272	Complete Axiomatization of Relativemodal Logic with Parallel Composition and Propositional Quantifiers
-41273	
-41274	Revisiting the E-Measure: New Insights and Conditions for Effective Subdomain Testing Strategies
-41275	Reordering Secondary Task Attributes: A Study of Human Cognitive Ability and Visual Operations
-41276	STOC: A Practical Framework for Spatiotemporal Query Processing in Object-Relational Databases
-41277	Virtual Positioning and Semantic-Based Trajectory Generation for Indoor Moving Objects Management: The Case of IndoorDB
-41278	Efficient Sampling Techniques for Faster Tensor Algorithms in Machine Learning
-41279	Exploring the Computation of Sum of Squares Decompositions using Semidefinite Programming: Applications in Real Algebra and Optimization
-41280	Optimal Tomographic Reconstruction of Binary Polygonal Objects from Noisy Projections Using Variational Framework and Statistical Methods
-41281	Equivalence and Lower Bounds: Connections between Graph Testing, DNA Complex Screening, Superimposed Codes, and Secure Key Distribution
-41282	Breaking the Boundaries: Novel Capacity Bounds for the Gaussian Interference Relay Channel
-41283	View-Conditioned Causality: A Novel Approach for Identifying Causes of Unexpected Results in Multiple Query Environments
-41284	VDN: A Practical Solution for High-Quality, Scalable, and Responsive Live Video Delivery in CDNs
-41285	Efficient Data Management in Grid Environments: A Two-Layered Metadata Service Model for High Performance and Availability 
-41286	Optimizing Cloud Performance: An Application Placement Framework for Memory-Intensive Workloads
-41287	Efficient and Reliable Data Gathering in Road-Side Sensor Networks Using Virtual Blocks and Converge Cast Trees
-41288	The α-Graph: A Robust Boundary Definition for Sparse Point Sets in R2 and its Applications in Multi-Scale Recognition of Industrial Objects
-41289	Advancing Healthcare Support: A User-Oriented Multi-Agent System in Ubiquitous Computing Environment
-41290	Uncovering the Surprising Equality of Regular Star Languages and Prefix Morphisms
-41291	Decidability and Characterization of MSO Definable Transductions by Nondeterministic Finite-State Transducers
-41292	Crossroads: A Time-Sensitive Approach to Efficient Intersection Management for Connected Autonomous Vehicles
-41293	Dynamic Memory Management for Optimal Energy Efficiency in Multimedia Applications
-41294	Unlocking the Potential of HCI Patterns: Towards a Standardized Language for Model-Based User Interface Development
-41295	Transforming Object-Oriented Programming with JavaGI: A Language Extension for Streamlined Implementation of Design Patterns
-41296	Enhancing Knowledge Exchange in Discussion Forums: A Market-Oriented Approach with Adaptive Capabilities 
-41297	Safeguarding PSAPs in the Era of All-IP Networks: An Intrusion Detection Solution for VoIP DoS Attacks
-41298	Unveiling the Power of Triangle Algebras: From Interval-Valued Residuated Lattices to Pseudo-Prelinear Triangle Logic
-41299	Cuckoo-Inspired Algorithms: A Comprehensive Overview and Applications
-41300	Maximizing Caller Behavior Classification Accuracy: A Comparative Analysis of Computational Intelligent Techniques in Interactive Voice Response Systems
-41301	Efficient Outlier Detection for Sparse Data with Factorization Machines: A Comprehensive Study
-41302	Spray and Wait: An Efficient Routing Solution for Intermittently Connected Mobile Networks
-41303	Maximal Selectors and Context-Free Languages: A Model for Natural Language Syntax
-41304	Evolving Object-Oriented Software Architectures: Techniques, Tools, and Research Agenda
-41305	Predicting Immediacy from Still Images: A Multi-task Deep Learning Approach with Rich Representations and a Large-scale Dataset
-41306	CTDMA: A Novel Resource Allocation Strategy for Multicarrier Communication Systems
-41307	Enhancing On-Site Learning Through Real-Time Feedback: An E-Book Based Visualization Support System
-41308	V: A Dataflow-Based Parallel Programming Language for Conventional Multi-Processors
-41309	PoSIM: A Translucent Middleware for Enhanced Positioning System Integration and Management in Location Based Services
-41310	Fast and Accurate Image Similarity Measurement Using Flickr Groups and Stochastic Intersection Kernel Machines
-41311	Learning to Synthesize Novel Views with Appearance Flows: A Data-Driven Approach
-41312	Enhancing Web Service Dependability: A Replication-Based Approach
-41313	 ASCTS: A Kalman Filter Based Approach for Improving Self-Correcting Time Synchronization in Wireless Sensor Networks 
-41314	Efficient and Accurate Signal Integrity Fault Testing for On-Chip Interconnects Using High-Level Modeling and Test Pattern Generation
-41315	Improving Robust Speech Recognition in Noisy Environments with an SNR-Incremental Stochastic Matching Algorithm
-41316	Enhancing Acoustic Echo Cancellation through Nonlinear Error Recovery and Independent Component Analysis
-41317	Efficient Processing of XQuery Queries over Streaming XML Data with Single Pass Execution and Aggregation Support
-41318	Efficient Retrieval in External Hashing: Algorithms and Analysis
-41319	A Comprehensive Dataset for Face Verification Across Ages: VADANA with HLBP and AdaBoost Algorithm 
-41320	Unlocking Creativity: A Process-Oriented Framework for Successful Enterprise Content Management Implementation
-41321	Integrating Multiple Sources for Robust Inference of Gene Regulatory Networks: A Case Study on Saccharomyces cerevisiae Cell Cycle Mechanisms
-41322	Discovering Hierarchical Decision Models with Function Decomposition: The HINT System for Housing Loan-Allocation Applications
-41323	Modeling a Flexible and Expandable Traffic Simulation System Using Cellular Automata and Agent Technology
-41324	Combining Homeless and Home-based Protocols: A Performance Comparison in Distributed Shared Memory Systems
-41325	Promoting Cooperation and Combating Exploitation in P2P Systems through Decentralized Self-Organization and Social Mechanisms
-41326	Integrating Cognitive Agents with Virtual Worlds: A Framework for Structured Social Interactions in Second Life
-41327	Refined Bounds and Efficient Code Constructions for Coherent Network Error Correction
-41328	LB-MSNC: A Load-Balanced Multicast Switching Fabric with Network Coding for High-Speed and Large-Scale Extension in NGN
-41329	Advancing Robot Learning: A Multi-Modal Approach to Human-Machine Communication for Task Instruction and Imitation
-41330	Enhancing Target Detection in Multi-Robot Systems through Asynchronous Image Queue Display
-41331	Optimal Coalition Formation for Scheduling Heterogeneous Tasks on Unrelated Parallel Machines
-41332	Securing Partial Repair in Wireless Caching Networks: Investigating Strong and Weak Secrecy Caching Capacities and Optimal Secure Codes
-41333	Maximizing Energy Efficiency in Mobile Social Delay Tolerant Networks through Sebar Routing Scheme
-41334	Designing Truthful Mechanisms for Binary Demand Games: Overcoming Limitations of VCG Mechanisms
-41335	Efficient Traffic Generation for Data Center Networks: A Flow-Level Approach
-41336	Improving Error Correction in Second Language Learning: A Novel Approach Using Relative Position and Parse Template Language Models
-41337	Practical Approaches for the Traveling Salesman Problem: A Framework and Computational Experiments
-41338	Efficient Tracking Control for Switched Linear Time-Varying Delays Systems with Stabilizable and Unstabilizable Subsystems: A Comprehensive Study
-41339	Exploring Geospatial Cognition in Urban Space through Location-Based Social Networks: A Socio-Cognitive Map Approach
-41340	Multiscale-Based Analysis of Statistical Dependencies in Wavelet Coefficients: Investigating Models and Bayesian Estimation
-41341	Revolutionizing Building Efficiency and Comfort: An Advanced Application Stack for Sustainable Environmental Control
-41342	Enhancing Robustness and Imperceptibility in Watermarking with Hybrid Techniques and JND Masking
-41343	Efficient and Secure Medical Image Annotation using Key-Dependent Wavelet Transform and Reversible Watermarking in the Integer Fibonacci-Haar Transform Domain
-41344	
-41345	Unifying Adaptive Region Information and Mixture Modelling for Automatic Color Image Segmentation
-41346	Exploring the Design and Implementation of a Successful Reuse Repository for Software Development: A Case Study in Brazilian Software Factories
-41347	Efficient Target Tracking Control for Mobile Humanoid Robots: A Dual-Network Approach with Coordinated Task Execution
-41348	Efficient Iterative Learning Control for Robust Robot Path Control
-41349	Optimizing Handover Performance in Future Aeronautical Data Link Networks: A Case Study of L-DACS 1 Integration with IPv6 and DRR with Fragmentation Scheduler
-41350	Enhancing Collaboration and Knowledge Sharing through People-Tagging in Employee Directories
-41351	Object-Centric Sharing: Bridging the Gap Between Ad Hoc and Formal Collaboration
-41352	Maximizing Human Collaboration: The Role of Return On Contribution (ROC) in Enhancing Enterprise Social Software
-41353	Advancements in Multilingual Multimedia Access: Analysis and Linking in VideoCLEF 2008
-41354	Pic-A-Topic: Enhancing TV Viewing with Accurate Topic Segmentation and User-Friendly Interface for Travel and Beyond
-41355	Optimizing Energy Efficiency in Wireless Nanosensor Networks: A Study on Coding Design for Minimum Transmission Energy
-41356	Uncovering Hidden Associations: Enhancing Discriminative Sequential Learning Models for Natural Language Processing and Information Extraction
-41357	Predicting Negotiation Outcomes: The Power of Multimodal Behavioral Cues
-41358	 Efficient Convergent Lagrangian Method for Nonlinear Integer Programming in Series-Parallel Reliability Systems
-41359	Improving One-Bit Compressive Sensing with Pinball Loss: Convex Models and Efficient Algorithms
-41360	Efficient Implementation of Distance-Sensitive Querying in Wireless Sensor Networks via Hierarchical Fault-Local Stabilization
-41361	Enhancing Breast Cancer Detection Through Hybridized MRI Image Processing
-41362	Optimal Coordination of Multiple Robots in Common Environments: A Geometric Approach
-41363	Print-and-fold hexapod: Design, fabrication, and operation of a miniature self-assembling truss with active and passive links
-41364	Optimal Design of MIMO Cognitive Radio Networks with Robust Interference Constraints
-41365	FlashLight: A Novel Approach for Efficient Flash Management in Solid State Drives
-41366	Optimizing I/O Performance in Cloud Computing Environments through Xen-based Hadoop Cluster and I/O Ring Mechanism
-41367	Uncovering the Complexity of Subset Sum Instances without Additive Structure 
-41368	Efficient FPGA Implementation of a Compact Elliptic Curve Cryptosystem with Variable Key Size
-41369	Decentralized Task Planning for Heterogeneous Robotic Networks: A Consensus-Based Approach
-41370	Maximizing Consumer Contributions: Motivating Factors and Inhibiting Factors in Online Feedback Systems
-41371	Exploring the Cortical Sulci: A Parametric Approach for Morphological Analysis and Image Registration 
-41372	Enhancing Expert Systems: A Specialisation Calculus for Improved Communication
-41373	Maximizing Throughput and Fairness in Underwater Acoustic Networks: A TDM with FDM over OFDM MAC Protocol 
-41374	Revolutionizing Digital Music Delivery: A Seamless Handoff Solution for Mobile Users
-41375	Optimizing Spectrum and Energy Efficiency with Partial Spectrum Reuse in Two-Tier Heterogeneous Cellular Networks
-41376	Uncovering Equimatchable Graphs: A Study of Gallai-Edmonds Decomposition in Planar and Cubic Graphs
-41377	Efficient Approximation Algorithms for Metric Space Problems: Facility Location, Traveling Salesman, and Spanning Trees
-41378	Dynamic Multimodal Representation Learning for Autonomous Robotics: A Hierarchical Self-Organizing Neural Network Approach
-41379	Enhancing Food Image Recognition with Pervasive Cloud Computing and Feature Clustering
-41380	Enhancing Clustering of Big Healthcare Data: Multitask Mixture Models with Random Effects for Improved Quality and Effectiveness of Care
-41381	Designing Multi-Layered Interfaces for Improved Learnability of Mobile Applications for Older Adults
-41382	Designing for Cognitive Disabilities: Insights and Techniques from a Case Study with Individuals with Amnesia
-41383	Efficient Algorithms for Testing Isomorphism of Interval Graphs: Implementation and Extensions for Chordal Graphs
-41384	Exploiting Ordinary Characteristics: An Ordinary Preserving Manifold Analysis Approach for Age and Head Pose Estimation
-41385	 Real-Time ROS Architecture for Multi-Core Processors: Enhancing Performance and Efficiency in Industrial Robot Control
-41386	Ordinal Reranking for Improved Musical Concept Detection: Leveraging Concept Correlations and Context Fusion on Large-Scale Music Databases 
-41387	Spatio-Temporal Dynamics and Clustering of Epileptic Seizures: A Nonlinear Dependency Measure Approach
-41388	Quantum Query Complexity: Tight Bounds and New Results for Boolean Functions in the Black-Box Model
-41389	
-41390	Novel LP-based Approximation Algorithms for Facility Location with Service Installation Costs
-41391	MTSim: A Customizable Simulation Platform for High-Assurance Real-Time Systems with User-Defined Viewers and Event Injection Capabilities
-41392	Optimizing ECO Routing in FPGAs: A Bump-and-Refit Approach for Fast and Efficient Incremental Routing
-41393	Improving Performance and Power Efficiency in Time-Variant Channels through Weighted Cyclic Prefix Orthogonal Frequency Division Multiplexing with Precoding
-41394	Temporal Scalability Transcoding from H.264/AVC to SVC: An Efficient Approach with Impact Analysis on GOP Size 
-41395	Efficient Transcoding from MPEG-2 to H.264 Using Data Mining and RD Optimization
-41396	Enhancing Semantic Multimedia Indexing with Conceptual Feedback and Temporal Context: A Case Study with TRECVID 2012
-41397	Efficient and Stable Traffic Engineering with TeXCP: A Distributed Online Protocol for Realtime Load Balancing and Failure Resilience
-41398	Maximizing Network Efficiency: A Min-Actor Algorithm for CDS Construction in Heterogeneous WSANs
-41399	Integrating Visual and Haptic Information in Spatial Perception: Effects of Modality Switching and Congruence 
-41400	Revisiting the Relationship between Frequency and Conceptual Priming: A Critical Analysis of ERP Components and the Role of Fame in Recognition Memory
-41401	Robust Face Alignment in Surveillance Systems Using Segmentation and Combined AAM with PTZ Cameras
-41402	Maximizing Performance and Efficiency in Fault-Tolerant Multi-Resolution Video Servers: A QoS Negotiation Approach for Graceful Failure Recovery
-41403	Quantifying the Impact of Domain Engineering on Software Change Effort: A Case Study in Telecommunications
-41404	Stability and Convergence Analysis of Memristor-Based Cellular Neural Networks with Time Delays
-41405	Designing Optimal Planar Fixtures Using an Efficient Algorithm with Geometric Constraints
-41406	Efficient Slant and Slope Removal for Improved Handwritten Word Recognition: A Comparative Study
-41407	 Efficient Subgraph Isomorphism Detection for Incrementally Changing Iconic Queries Against Model Graphs
-41408	GOAFR: A High-Performing Geometric Ad-Hoc Routing Algorithm with Optimal Efficiency
-41409	 Efficient and Robust 3D Human Motion Tracking using Simulated Physical Force/Moment and Hierarchical Model Updating 
-41410	Efficient and Up-to-Date SLAM with CI-Graph Submapping and Graphical Techniques
-41411	Empowering End-Users: A Framework for Resource-Adaptive Systems in Ubiquitous Computing
-41412	Maximizing Forest Cover through Integrated Land-Use Development Policies: An Agent-Based GIS Approach
-41413	Advancing Ambient Assisted Living: Technologies and Services for an Aging Population
-41414	Advanced Character Segmentation for Improved Single-Touching Chinese Handwriting Recognition: A Deep Learning Approach
-41415	Enhancing Collaborative Learning: Lessons Learned and Future Directions from Interactive Systems
-41416	Efficient Task Scheduling for Dynamic SMP Clusters Using Moldable Tasks and Data Transfers on the Fly
-41417	Improving Throughput and Performance in Low Energy Critical Infrastructure Monitoring Networks with Novel Preamble Patterns and Receiver Techniques
-41418	Context-Aware Delivery of Process Information: Challenges, Solutions, and Requirements
-41419	Efficient Concurrency Verification for Anomaly Detection in Business Process Executions
-41420	Accelerating Reinforcement Learning with a Model-Free Dyna Architecture: A Case Study on Control of a Nonlinear System 
-41421	Securely Computing Pattern Matching and Automata Evaluation: Novel Protocols with Simulation-Based Security
-41422	 Solving Coordination Problems in Multi-Agent Systems: The Impact of Agent Interaction on Complexity
-41423	 TriSI: A Robust Local Surface Descriptor for 3D Object Recognition and Modeling
-41424	Advancements in Hyperspectral Imaging for Forensic Document Analysis: A Novel Band Selection Technique for Improved Ink Mismatch Detection
-41425	Automatic Mapping of State Conditions onto Programmable Trigger Events for Post-Silicon Debugging
-41426	Exploring the Tight Span: A Greedy Approach to Optimal Realizations of Finite Metric Spaces
-41427	Improving ImageCLEF Performance through Query and Document Expansion: A Study of Web-based Information Integration
-41428	Efficient On-line Analysis of Time-Series Stream Data: A Study on Multi-Dimensional Regression Techniques
-41429	Compositional Model-based Testing for Scalable Test-case Generation in Large Industrial Systems
-41430	Automated Combinatorial Testing in VDM: A Tool for Rapid Detection of Run-Time Errors
-41431	Optimizing Timing and Area in Automated Layout Systems: A Parallel Adaptive Routing Algorithm for Zero Skew Clock Trees
-41432	VisPro: A Generic Environment for Designing and Implementing Visual Programming Languages
-41433	Exploring the Evolution and Advancements of BinProlog: A Revolutionary Prolog Engine with First-Class Logic Engines and Optimized Binary Logic Programs
-41434	RHENE: A Case Retrieval System for Quality Assessment of Hemodialysis Treatment Using Dynamic Time-Series Analysis
-41435	Integrating Rule-Based and Case-Based Reasoning for Diabetes Management: A Multi-Modal Decision Support Tool
-41436	 Enhancing Three-Way Decisions with Dual Hesitant Fuzzy DTRSs: A Comprehensive Approach for Risk Decision-Making in Uncertain Environments
-41437	Optimizing QoS-Based Networks with Adaptive Wavelet Traffic Prediction
-41438	Advancing Large Vocabulary Speech Recognition: A Study on the Effectiveness of Convolutional Neural Networks and Speaker Adaptation Techniques
-41439	Improving Ant Colony Classification: A Study on Coping with Continuous Attributes using cAnt-Miner
-41440	Efficient Fault Detection in Wireless Sensor Networks Using Reputation Concepts and Beacon Nodes
-41441	Towards Autonomic Computing: Formal Specification and Code Generation for Self-Optimization in Distributed Modular Audio Recognition Framework (DMARF)
-41442	Efficient Privacy Preservation through Decoupling: A Comparative Analysis of Generalization Strategies
-41443	Unraveling the Genetic Code: Combinatorial Approaches to Haplotyping and SNP Mapping in Human Genomics
-41444	Uncovering the Limitations of the Tripartition Metric in Phylogenetic Networks
-41445	Improving Named Entity Recognition in Japanese Using Word Chunks and Machine Learning Techniques
-41446	Maximizing Symmetry: A Novel Framework for Recovering Curved Parts in Cluttered Scenes
-41447	Improving Range Image Registration with Geometric Parametric Models
-41448	Efficient and Optimal Syndrome-Based Coding for Nonuniform Sources using Turbo Codes 
-41449	Scaling Up: Efficient and Secure N-Party Password-Authenticated Key Exchange for End-to-End Communication
-41450	Adaptive Scene-Conditional Background Update for Moving Object Detection in a Dynamic Environment
-41451	FLAME: A Novel Mesh Registration Technique for Accurate 3D Facial Modeling and Expression
-41452	Capturing Complex Motion Patterns: A Novel Approach using Locally-Linear Gaussian Process Latent Variable Models
-41453	Exploring Symmetry in Skewed Geometric Shapes: Deriving Invariants and Establishing Links with Invariance Research
-41454	Enhancing ESNN with QiPSO: Feature Selection and Parameter Optimization for String Pattern Recognition
-41455	Advances in Statistical Methods for Estimation of Vocal Tract Kinematics: A Multimodal Analysis Approach
-41456	Uncovering the Impact of Vocal Entrainment on Conflictual Marital Interactions: A Quantitative Analysis Using a Signal-Derived Computational Framework
-41457	Enhancing Compliance and Evidentiary Value in Storage Systems: A Review of Security Constructs for Electronic Records Management
-41458	Uncovering the Topological Properties of Polypentagons: Enumeration and Classification of Systems with One and Two Internal Vertices 
-41459	Optimizing Deep Brain Structure Segmentation: A Hierarchical Markov Dependence Tree Approach
-41460	Modular Architecture for ECG Beat Classification: An Investigation of Combination and Partition Strategies with Incremental Learning 
-41461	Efficient Construction and Security of Re-splittable Threshold Public Key Encryption Schemes based on Discrete Logarithm Assumptions
-41462	Maximizing File-System Performance in Flash-Memory Storage Systems: A Filter-Driver-Layered Approach with Efficient Caching and Recovery Strategies
-41463	Efficient and Accurate Hot Data Identification for Flash Memory Storage Systems: A Multiple Hash Function Approach 
-41464	Uncovering Interdomain Congestion: A Time Sequence Latency Probes Approach
-41465	Maximizing Circuit Performance: An Efficient and Accurate Approach to Small-Delay Fault Detection and Test Pattern Generation
-41466	Efficient Generation of Minimal Counterexamples for Probabilistic Verification of Large Systems
-41467	Efficient Invariant Feature Extraction for Color Images Using Principal Component Analysis and Competitive Learning Algorithm 
-41468	Efficient and Secure Masked S-Box Implementation for AES Using Composite Field Arithmetic
-41469	Unveiling Vulnerabilities: A Detailed Look into the Security of Automated Door Openers
-41470	Efficient and Private Payment Scheme for Transit Systems using P4R and BLS Signatures
-41471	Advancing High-Speed Image Processing: A Fully Digital S-CNN Pixel Processor Architecture
-41472	Unlocking the Full Potential of Web Services: Enhancing Agility through Semantic Descriptions and Dynamic Composition
-41473	Breaking the Bounds: A Study of Convex Bodies and their Holes in $$\\mathbb {R}^3$$R3 
-41474	Uncovering the Linear Behavior of 2D Visibility Complex: An Experimental Study
-41475	Efficient Visual Query Processing for Content-Based Image Retrieval using a Hierarchical SOM Approach
-41476	Optimizing Virtual Travel: Hybrid Snapping-to-Photos Interfaces for 3D Reconstructed Scenes
-41477	Optimizing Position Control of CNC Machining Center X-Y Table Through Friction Compensation at Velocity Reversal
-41478	Maximizing Control Efficiency in Event-Driven Systems: A Supervisory Control Theory Approach Using LEGO® Test-Bed
-41479	Breaking Boundaries: The Impact of Multi-Scale Similarities on Dimensionality Reduction Methods for High-Dimensional Data Visualization
-41480	Optimizing Inventory Control with Stochastic Replenishments and Fuzzy Demands: A Hybrid Meta-Heuristic Approach
-41481	Secure Delegation of Elliptic-Curve Pairing: A Protocol for Computationally Limited Devices
-41482	Autonomy and Stability in Interdomain Routing: A Game-Theoretic Analysis
-41483	Enhancing Scene Flow Estimation with Joint Occlusion and Large Displacement Handling in RGB-D Framework
-41484	Efficient and Accurate Spectral Clustering for Large-Scale Hyperspectral Image Classification: An Iterative Optimization Approach
-41485	Uncovering Hidden Hot Spots: A Geosocial Approach to Disease Surveillance Using Twitter Data
-41486	Uncovering Hidden Structures in Multi-Label Learning: A Bayesian Nonparametric Approach with Mixed Gamma Processes
-41487	Efficient and Accurate Template Detection and Removal for Improved Web Mining and Information Retrieval
-41488	Enhancing Robustness and Discriminative Power in Human Behavior Recognition with Spatiotemporal Invariant Feature Points and Descriptors
-41489	
-41490	Enhancing Post-Silicon Validation in SoCs: An AXI-based Debug Platform for Complex Interconnects
-41491	Enhancing Efficiency: A Comparative Study of High-Order Iterative Methods for Nonlinear Systems
-41492	Exploring the Dynamics of Optimal Iterative Schemes for Nonlinear Equations: A Fractal Perspective
-41493	Streamlining Distributed Office Systems with D-OBE: A User-Friendly and Flexible Solution
-41494	Sparse and Nonnegative Representations for Image Categorization and Video Retrieval using Group Nonnegative Garrote Method
-41495	Style-Preserving Cartoon Synthesis through Non-Negative Style Factorization and Subkey-Driving Strategy
-41496	Breaking the Mold: Achieving Optimal Diversity-Multiplexing Tradeoff with Imperfect Channel State Information and Feedback in MIMO Communication Systems
-41497	Optimizing Multimedia Communication in 3G Networks: A Study of 3G-324M Protocol and H.245 Control Channel
-41498	Optimizing Wireless Charging in Sensor Networks: A Novel Approach using Portable Chargers and a Single Mobile Vehicle
-41499	Enhancing SSL Security with Automatic Detection and Recognition of Web-Spoofing Attacks
-41500	Multi-resolution Community Detection via MOEA: Optimizing Contradictory Objectives for Revealing Network Structures
-41501	Maximizing Performance: Analyzing Goodput and Delay in a Novel RFID Tag-Based Communication Channel
-41502	Exploring the Impact of Public Institution Involvement on the Development of National Information Superhighways: A Case Study of the UK and its Comparisons with Other Countries
-41503	Expanding Dynamic Ranges: Adaptive Sensing Models and Algorithms for Single-Photon Sensors
-41504	Optimizing Distributed-Memory Error Correction for High-Throughput Genomic Datasets: A Speedup of Up to 11X
-41505	Efficient Separation Algorithms for (t)-Antiweb-s-Wheel Inequalities in the Maximum Weight Stable Set Problem
-41506	Optimierung der Echtzeit-Objektverfolgung durch wissensbasierte Kameraaktionen in natürlicher Umgebung
-41507	Uncovering Relevant Values: Enhancing Data Integration with Automatic Extraction and Parameterized Similarity Metrics
-41508	Enhancing E-commerce with a Novel Product Recommendation System: A Vector Space and Association Rule Mining Approach
-41509	Ensuring Reliable Communication in Network-on-Chip Routers Through Dynamic Reconfiguration and Fault Tolerance Techniques
-41510	Exploring the Computational Complexity of Modal Dependence Logic: A Study of Restricted Fragments and Boolean Connectives
-41511	Expanding the Expressive Power of OWL: Introducing OWL$++ for Efficiently Modeling Real World Phenomena
-41512	Maximizing Success: The Role of Static Architecture Evaluation in Software Development and Product Line Engineering
-41513	Improving Passage Re-Ranking in Complex Question Answering with Web Mining and Multi-Agent Simulation
-41514	Modeling Land Use Change: A Coupled Cellular Automata and Radial Basis Function Neural Network Approach
-41515	Maximizing Network Lifetime in Wireless Sensor Networks: An Opportunistic Routing Approach with EFFORT
-41516	Strengthening Post-Quantum Cryptography: The Resilience of McEliece and Niederreiter Cryptosystems Against Quantum Attacks
-41517	Decentralized Reliability in Network Supercomputing: A Decentralized Approach for Efficient and Secure Task Execution
-41518	Evolutionary Optimization of LTE Heterogeneous Networks using Grammatical Genetic Programming: Towards Automated and Augmented Cellular Communications Design
-41519	Robust Global Stabilization for Nonlinear Delay Systems with Sampled Measurements and Input Delays using Predictors and High-Gain Observers
-41520	Making Serious Games Accessible: A Methodology for Semi-Automated Adaptation and Evaluation
-41521	Comparing WS-Reliability and WS-ReliableMessaging: A Study of Web Services Delivery Specifications and Performance
-41522	Improving Vicarious Calibration Accuracy for UAV Hyperspectral Remote Sensors Using an Improved Irradiance-Based Method 
-41523	Extending the Power of Fourier Transforms: A Quaternion-based Approach for Filtering Color Images
-41524	Exploring the Integration of Spectral and Spatial Features for Improved Vegetation Classification in Precision Agriculture using Scatter-Matrix-based Feature Selection Method
-41525	Efficient Map Synchronization for Multi-Robot Coordination in Area Exploration Tasks
-41526	Exploring the Fusion of Structured and Unstructured Data for Efficient Library Catalog Maintenance
-41527	Maximizing Quality of Experience: An Online Learning Approach to Network Selection in Heterogeneous Wireless Networks
-41528	Maximizing Data Quality in Crowdsensing: An Incentive Mechanism Design Approach
-41529	 Optimizing Radar Waveforms for Enhanced Performance in Spectrally Crowded Environments
-41530	Fuzzy OLAP Mining for Multiagent Cooperative Learning: A Novel Approach
-41531	Integrating Multiple Attributes in Knowledge Merging: A Distance-Based Approach for Consistency and Relevance
-41532	Enhancing Bayesian Network Classifiers through Communication-Free Widening and Locality Sensitive Hashing
-41533	Optimizing Edge Detection with Regularized Cubic B-Spline Fitting and Adaptive Multiscale Thresholding
-41534	AudioDAQ: Harnessing the Power and Potential of Mobile Phones for Data Acquisition and Sensing Applications
-41535	Tensorial Classification of Cardiomyopathies Using Delayed Enhancement Magnetic Resonance Imaging: A Computational Approach
-41536	  Optimal and Super-@lk-Connectedness in Triangle-Free Graphs: Characterization and Sufficient Conditions
-41537	Enhancing Collaboration with Montage: A Study of Distributed Groups
-41538	Pose-Invariant Facial Expression Recognition Using Coupled Gaussian Process Regression Model
-41539	Maximizing Interconnectedness: A Study of Directed De Bruijn and Kautz Bus Networks
-41540	Perfect Neighborhood Sets in Graphs: Calculation and Complexity Results
-41541	Efficient Sensor Scheduling for Stochastic Process Estimation: A Non-Greedy Approach
-41542	Advances in Razumikhin-type Theorems for Stability of Stochastic Retarded Systems
-41543	Boosting Relational Sequence Alignment: Exploiting Symbolic Structure for Improved Learning
-41544	Adaptive Neural Control for Safe and Accurate Trajectory Tracking in Active Orthosis Rehabilitation
-41545	Accelerated Recovery of Jointly Sparse Vectors Using Randomized Kaczmarz Method with Optimal Projection Selection 
-41546	Exploration of Explanation-Based Neural Network Learning: Combining Symbolic and Inductive Approaches for Robust Learning
-41547	Enhancing Control Systems with Distributed Data Logging and Analysis Tools
-41548	Efficient and Adaptive Multimedia Analysis Through Experiential Sampling of Multiple Data Streams
-41549	Maximizing Classification Accuracy in Brain-Computer Interface Using Gaussian Mixture Models and Variational Bayesian Method
-41550	Exploring the Complexity of Web Service Composition: An EXPTIME-Lower Bound and Richer Models
-41551	Improving Flash Performance in Enterprise-Scale Environments: Introducing RFTL, a Replication-Based DFTL for Selective Caching
-41552	Efficient and Accurate Four-Chamber Heart Segmentation in 3D Cardiac CT Volumes Using a Novel Statistical Shape Model and Marginal Space Learning
-41553	Exploring Manifold-Valued Data: A Generalized Approach Using Thin-Plate Splines in Computer Graphics Applications
-41554	Enhancing Offshore Energy Operations with Autonomous Robotics: The ORCA Hub Approach
-41555	Real-Time Perception and Reactive Motion Generation for Dynamic Manipulation in Uncertain Environments
-41556	Revealing the Dynamics of Gene Expression: A Novel Algorithm for Analyzing Time-Course Data
-41557	Efficiently Scheduling Workloads in Distributed Grid Environments: The SUPERLINK-ONLINE Approach for Genetic Linkage Analysis
-41558	Efficient Recovery and Conflict Resolution in Mobile Data Applications through Merged Transaction Histories
-41559	Efficiently Solving the Class Integration and Test Order Problem Using Coupling-Based Weights and Automated Techniques
-41560	Expanding the Limits of Asymptotically Good Codes: Novel Constructions Using Expanders and Concatenation
-41561	Optimizing Energy-Aware Queuing Systems: A Study of Optimal Control for Sleep States
-41562	Mean-Field Analysis for Performance Estimation in Large-scale CSMA Wireless Networks with Intermittent Traffic Sources
-41563	Optimizing Active Queue Management Performance: The Impact of Unresponsive Traffic and the Role of Model-Based Controllers
-41564	Efficient Reasoning in Terminological Knowledge Representation Systems: Complexity Analysis and Algorithms
-41565	Intervention Representation and Belief Change in Possibilistic Logic: A Framework for Modeling Causal Relations in Event Sequences
-41566	Merging Qualitative Constraint Networks: A Local Approach with Consistent Results
-41567	Robust and Efficient Object Recognition Using Multidimensional Receptive Field Histograms and Probabilistic Estimation
-41568	Exploring the Computational Completeness of NLP Systems with L Systems in the Nodes
-41569	Exploring Competence in CD Grammar Systems: A Study of Cooperation and Generative Power
-41570	Efficient City Exploration: GPU-Friendly BlockMaps for Interactive Rendering of Textured Urban Models
-41571	Revolutionizing 3D Data Visualization: The MagicSphere Solution and Its Applications in Multi-Resolution Datasets
-41572	Unveiling the Illumination Cone: A Method for Invariant Object Recognition
-41573	Cost-effective Crowdsourcing: Achieving Professional Quality Transcription with Non-Professionals
-41574	Unveiling the Robustness of Shallow Parsers: Investigating Noise and Distribution Effects on Performance
-41575	Enhancing Collaboration: Design Considerations for Multi-User Gestural Interactions on a Large, Wall-Mounted Display with an Optically Tracked Laser Pointer
-41576	Secure and Efficient Certificateless Signatures with Instantaneous Revocation
-41577	PEREA: Efficient and Secure Revocation of Misbehaving Anonymous Users without TTP Involvement
-41578	Robust Independent Component Analysis for Estimating Atrial Activity in Atrial Fibrillation ECGs with Low Computational Complexity
-41579	Nonstationary Combination of Multiple Kernels with Support Vector Machines for Multi-Dimensional Biological Data Analysis
-41580	Synergizing Verification Techniques for Software and Hardware Interfaces: A Case Study on Partial Order Reduction and Symbolic Model-Checking
-41581	Exploring the Connection between Fixpoint Logic and Complexity: A Logical Approach to Understanding Computational Power 
-41582	Efficient Fault Tolerance Techniques for Application Specific Programmable Processors: A Behavioral Synthesis Approach
-41583	Maximizing Network Lifetime and Energy Efficiency in Distributed Wireless Systems: A Localized Approach
-41584	 Efficient Generation of Contextual Complete Prefixes for Verification of Semi-Weighted Bounded Contextual Nets
-41585	Dynamic Coordination in Disaster Scenarios: A Prototype Application for Multi-Party Negotiations in Ad-Hoc Networks
-41586	Exploring the Potential of Peripheral Design: A User Study of Mobile Peripheral Interaction with Emotipix
-41587	Revolutionizing Adaptive Cruise Control: A Reinforcement Learning Approach for Cooperative Vehicle Control
-41588	Enhancing Mobile Robot Teleoperation with Haptic Feedback: A User Study 
-41589	Unleashing the Power of Probabilistic Principal Surfaces: A Case Study on Yeast Gene Expression Data Analysis
-41590	Exploring Stability in Fuzzy Biclustering: An Analysis of Spectral Indexes for Bioinformatic Data Analysis
-41591	Exploring the Synergies between Vector Quantization and Fuzzy Clustering: A Novel Approach for Image Reconstruction
-41592	Decoding Neural Correlates of Hand Grasping Using Phase-Based Features in Motor Imagery Brain-Computer Interfaces
-41593	Uncovering the Small-World Structure of Cortical Networks through Multi-Electrode Recordings and Generalized Linear Models: A Study of Excitatory Weight-Hub Neurons and their Impact on Network Dynamics
-41594	Efficient Testing and Recovery Strategies for B-Tree Index Structures in High Concurrency Databases
-41595	Enhancing Depth Perception in Occluded Scenic Images using Adaptive Disparity and Monocular Feature Filters
-41596	Empowering Nonprofit Community Organizations through Informal Learning and IT Management: Lessons Learned from Three Case Studies
-41597	Efficient Reconstruction of Network Topology Using Prüfer Encoding and Decoding Techniques 
-41598	RNA Align: A User-Friendly Web Server for Comparative Analysis of RNA Structure Ensembles and Interactions
-41599	Enhancing Grid Resource Co-allocation through a Relaxed-Criteria G-Negotiation Mechanism: Designing and Evaluating a Testbed for Concurrent Negotiations
-41600	Coalgebraic Perspective on Non-Deterministic and Probabilistic State-Based Systems: A Study of the Combination through the Monadic Framework
-41601	Expanding Behavioural Intrusion Detection to Game Networks: A Study of Behavioural Biometric Signatures in Poker
-41602	Exploring the Characterization and Enumeration of Minimal Separators in Chordal Graphs
-41603	Chameleon: A Flexible Grammar-Guided Genetic Programming Framework for Data Mining and Software Testing 
-41604	Exploring Cost Tradeoffs in Graph Embeddings: A Study of Bandwidth and Pebble Games
-41605	Unifying Cost and Efficiency: Online Ensemble Learning for Imbalanced Data Streams 
-41606	Enhancing Geometrical Modeling: An Interactive System for Generating Aesthetically Pleasing Freeform Shapes with Topology Consistency
-41607	Semantic Metadata Mediation: A Hybrid Ontology Approach for Reconciling Heterogeneous Information in Decisional Systems
-41608	Exploring Architectural Solutions for Hardware-Accelerated Production Systems: Initial Findings and Potential Trade-Offs
-41609	Uncovering Human Mobility Patterns: A Hybrid Predictive Model Using Heterogeneous Datasets
-41610	Exploring Human Ancestry: A Comprehensive Analysis of STR Variations in a Personal Genome Using lobSTR
-41611	Output-Constrained Clustering for Improved Fuzzy System Identification and Granular System Identification
-41612	G-ToPSS: A Scalable Solution for Selective Information Dissemination and Metadata Management in RSS Systems
-41613	Efficient Discretization for Improved Classification Performance: A Comparison of Supervised Algorithms using Metric-based Partitioning on Gene Expression Data
-41614	Efficient Bayesian Hierarchical Modeling for Large Spatial Data Sets: The Adaptive Griddy Gibbs Algorithm
-41615	Expanding the Scope of Co-Clustering: A Bregman-Based Approach Using OLAP for Scalable Matrix Approximation
-41616	Unleashing the Power of Adaptive Heuristics in Distributed Environments: A Game-Theoretic Analysis
-41617	DOMLEM: Inducing Decision Rules for Dominance-Based Rough Set Approach in Multicriteria Sorting Decision Problems 
-41618	Optimizing Design and Motion Control of an Agricultural Picking Manipulator through Virtual Simulation and Neural Network Techniques
-41619	STR3: An optimal GAC algorithm for table constraints in Constraint Programming
+410	Skewed Stable Random Projections for Dynamic Data Streams: Sample Complexity and Practical Applications
+411	Unlocking the Dual Mechanisms of the Eyes: From Sensory Input to Internal Memory Browser in Cognitive Processing
+412	Joint Design of ( )-Regular LDPC Codes and Decoder/Encoder for High-Performance and Low-Complexity Hardware Implementation
+413	Efficient 2-D Algorithm for Solving the Sum of Linear Fractional Functions Problem with Dynamic Constraints
+414	Optimizing Topology Control Algorithms for Energy Conservation and Network Performance in Multi-Hop Wireless Networks
+415	Exploring the Power and Limitations of 3-D Fan Filters for Moving Object Detection: Insights from the 3-D Radon Transform
+416	Optimizing Network Capacity and Device Efficiency through Beamsteering on Mobile Devices: A Distributed Approach
+417	 Improving Time Series Classification with a Hybrid Similarity Measure: A Framework for Fusion of Distance Measures
+418	Magic Closet: A Practical System for Automatic Occasion-Oriented Clothing Recommendation and Pairing
+419	Efficient Reporting of Intersecting Objects in Axis-Aligned Ranges: Data Structures and Complexity Analysis 
+4110	Multi-Person Tracking in Complex Environments: A Two-Stage Graph-Based Object Tracking Approach Using Multiple Calibrated Cameras
+4111	Improving the Effectiveness of Verifying Concurrent Java Programs: An Evaluation of the JPF 2 Model Checker in the TestCon Method
+4112	Uncovering the Complexity of Optimal Assembly Sequences: A Study on Cost Measures and Virtual Assembly Sequencing
+4113	Optimizing Performance in Federated Network Simulation with Runtime Infrastructure: A Case Study
+4114	Exploring Single Image Defogging: A Color Ellipsoid Framework with Depth Cues and Gaussian Mixture Models
+4115	d-Clock: A Distributed Algorithm for Fair Bandwidth Allocation in Heterogeneous Distributed Storage Systems
+4116	Collaborative Cyber Attack Protection: An ESPER-based Approach for Detecting Inter-domain Port Scans in Critical Infrastructures
+4117	Optimizing Unequal Error Protection for Media Data in Time-Sliced DVB-H Channels: A Reed-Solomon FEC Approach
+4118	Optimal Caching and Delivery Strategies for Random Demands in Shared Link Networks
+4119	Enhancing Spectral Efficiency through Distributed Base Station Cooperation: Characterization and Performance Analysis
+4120	Decidability and Topological Properties of Piecewise Affine Maps: New Techniques and Connections to Rational Base Systems
+4121	Monotone Connected Visible Search Number: Tight Bounds and the Effect of Recontamination
+4122	Shadowed State: A Dynamic Technique for Detecting Improperly Bounded Program Inputs in Secure Applications
+4123	Uncovering the Influence of Dense Flows: A Study on Small-Time Scaling Behaviors of Internet Backbone Traffic
+4124	Cooperative Congestion Control: Identifying Congested Flows through End-Host Observations
+4125	MSPlayer: Maximizing Mobile Video Streaming with Multi-Source and Multi-Path Technology 
+4126	Driving the Future: The Intersection of Economics and Social Sciences in Internet Protocols and Services
+4127	Performance Comparison of Aggregation Schemes in Hierarchical Networks: A Simulation Study
+4128	Cloud-Based Mobile Pervasive Healthcare System for Independent Patient Monitoring and Emergency Response
+4129	Self-Aware Data Compression on FPGA for Efficient Columnar Data Warehousing
+4130	Revolutionizing the Simple Plant Location Problem: An Aggressive Reduction Scheme for Efficiently Solving Large Instances
+4131	Optimal Graph Generation under Various Distributions: A Complexity-Theoretic Perspective 
+4132	Optimizing Multi-User MU-MIMO Downlink Transmission with Statistical CSI and Correlated MIMO Channels through Eigen-Mode Space Division 
+4133	 Maximizing Performance and Power Efficiency Through Native Double Precision Support on a Hybrid Reconfigurable CPU: An Investigation of Data Paths and SIMD Acceleration Using the LINPACK Benchmark on a Stretch S6 Platform 
+4134	Integrating Data Attributes and Pairwise Relations: A Novel Approach to Clustering Using KL Method
+4135	Exploring Unlabeled Data with Semi-Supervised Orthogonal Discriminant Analysis via Label Propagation
+4136	Accelerating Microprocessor Architecture Design: A Multi-Threaded Workload Synthesis Approach
+4137	Optimizing Bandwidth and Performance in a Cooperative Coded M-ary Modulation System: Analytical and Simulation Results
+4138	Efficient Nonsmooth Optimization for Optimal Transmit Beamforming in Cognitive Radio Multicast Transmission
+4139	Natural and Efficient: A Levenshtein-Based Approach to Measuring Error Rates in Text Entry Research
+4140	Examining the Impact of Stereo Display Limitations on 3D Pointing in Peri-Personal Space
+4141	W-Boost: A Novel Boosting Scheme for Self-Similar and Non-linear Internet Traffic Prediction
+4142	Enhancing Graph Clustering Accuracy through Flexible and Robust Integration of Multiple Networks: The NoNClus Framework
+4143	Automated Defect-Correcting Refactorings: A Relational Concept Analysis Approach for Software Engineers
+4144	Managing Disappearance of Critical Nodes in Social Networks: A Role-Based Approach
+4145	Solving the 0-1 Multi-Objective Knapsack Problem: A Dynamic Programming Approach with Complementary Dominance Relations
+4146	Hamiltonian Paths and Cycles in Toeplitz Graphs: Existence Conditions and Symmetric Toeplitz Adjacency Matrices
+4147	Exploring Min-Max Regret Approximations for Classical Optimization Problems with Varying Scenarios
+4148	Sharpening the LYM Inequality: New Bounds for the Level Sequence of Sperner Families
+4149	Extending Recursive and Cyclotomic Constructions: Exploring External Difference Families and Disjoint Difference Families with Connections to (Almost) Difference Sets
+4150	Nonlocal Prior Based Adaptive Loop Filter for Improved Video Coding Performance
+4151	Anisotropic Dual-Tree Discrete Wavelet Transform for Efficient Image Coding with Noise Shaping and SPIHT Coding
+4152	Optimizing File Delivery and Power Consumption Tradeoff in Cache-Enabled Dense Small Cell Networks: A GDB Approach
+4153	Efficient and Reliable Real-Time Video Transmission over Wireless Channels through Adaptive QoS Control
+4154	 Novel Nonlinear Circuits with All-Positive Hysteresis Loops using NMOS Transistors and First-Order Filters
+4155	Uncovering the Unlimited Supply of Bugs: The Development and Success of Coverity's Bug-Finding Tool
+4156	Contextualized Decision Support for Police Officers: A Rule-Based System
+4157	Optimizing Performance in Multicluster Systems through Processor Co-allocation: A Simulation Study of Scheduling Policies
+4158	PERFORMANCE EVALUATION FRAMEWORK FOR GRID COMPUTING: Combining Metrics, Workload Modeling, and Flexible Tools in GRENCHMARK
+4159	Improving Implicit Feedback in Recommender Systems: A Hierarchical Bayesian Framework with Probabilistic Topic Modeling
+4160	Exploring the Implementation of DySER Accelerator in OpenSPARC: A Study on Integration and Compiler Development
+4161	RPEM: A Multi-Task Embedding Model for Cross-Domain Recommendations in E-commerce Websites
+4162	An Approach to Question Answering for Spanish: Utilizing Lexical Context and Pattern Recognition
+4163	Adapting JIRS for CLEF-IP 2009: A Study of Stylistic Characteristics in Patent Retrieval
+4164	Exploring Lexical Context for Efficient Question Answering in Spanish: A Prototype and Evaluation at CLEF 2004
+4165	Efficient Algebraic Codes and Construction-A Lattices for Achieving High Rates in K-User Gaussian Interference Channels
+4166	Temporal Coherence-Based Saliency Maps for Reliable Vision-Based Control in Challenging Scenes
+4167	Modeling Security Protocols with Hereditary Harrop Formulas in Intuitionistic Logic: A λProlog Approach
+4168	Accelerating Compressed Sensing Recovery: Introducing the Omega Scheme and Extended Omega Scheme for Improved Signal Reconstruction Efficiency and Eliminating the Need for Prior Knowledge
+4169	Real-Time Landmine Detection Using Ground-Penetrating Radar: A System with Adaptive Preprocessing, HMM-Based Detection, and Incremental Model Updates
+4170	BIRD: A Locally Adaptive Region Detector using Bilateral Kernel-based Multiscale Decomposition
+4171	Dynamic Goal Potential Field Algorithm for Real-Time Object Tracking and Obstacle Avoidance in a Mobile Robot
+4172	Revisiting Nonlinear Control Laws for Stabilization of Saturated Linear Systems: A Rational and Constructive Approach
+4173	Enhancing Epidural Needle Placement with Augmented 3D Ultrasound: A Statistical Shape+Pose Model Approach
+4174	Unsupervised Multi-Document Summarization Using Word Associations in the Age of Big Data
+4175	Optimizing VM Startup Times in IaaS Clouds Using Small Image Caches
+4176	Modeling Flock Evolution: The Role of Influence Decay and Convergence
+4177	Dynamic Frequency Control for Improved Performance in Time Warp Synchronized Parallel Discrete Event Simulators
+4178	Efficient Generation of Posynomial Response Surface Models for Analog Integrated Circuit Performance Characteristics
+4179	Automatic Generation of Related Work Section in Scientific Papers using Citation Comparison and Keyword Graph Construction
+4180	Streamlining Chip-Package Co-Design: A Fast Heuristic Algorithm for Optimized Pin Assignment and Routing
+4181	Maytag: A Novel NLP and Text Mining Approach for Financial Document Analysis
+4182	Comparing String Distance Metrics for Entity Name Matching: A Comprehensive Evaluation Using an Open-Source Java Toolkit
+4183	Efficient Apprenticeship Learning in Reinforcement Learning with Unknown Dynamics
+4184	Uniqueness and Partial Ordering in Minimization of Nondeterministic Automata with Applications to Theoretical Physics
+4185	Mapping Unknown Faces: A Novel Method for Extracting Social Network Structures from Video Clips
+4186	Uncovering Network Reachability: Algorithms and Solutions for Security and Management 
+4187	Optimizing Tool Switching: A Memetic Algorithm Approach for the ToSP
+4188	Exploring the Role of Key Escrow in Identity-Based Cryptography for Secure MANETs: Adversary Models and Implications
+4189	Privacy Loss Modeling for Video Surveillance: Exploring Implicit and Explicit Inference Channels
+4190	Point-Sampled 3D Video Capture and Rendering with Structured Light Patterns
+4191	Cardiac Beat Observation Using Active Stereo with Waved-Grid Pattern Projection: Preliminary Experiments and Spatial Distribution Visualization
+4192	Uncovering Trends and Insights in Neuroscience: A Semantic Ontology-Based Mining System for Competitive Intelligence
+4193	Unleashing the Power of Correlations: A Generative Model for Multi-Label Classification
+4194	Neuro-Inspired Evolutionary Learning for Checkers: A Novel Approach Using Cartesian Genetic Programming
+4195	Efficient and Secure Public Key Encryption for Multiple Receivers under Selective Opening Attacks
+4196	Exploring and Enhancing Router-Level Internet Topologies: A Realistic Modeling Approach with Application to Routing Control
+4197	Triangular Spamming: A Stealthy and Efficient Technique for Carrying Out Spam Campaigns and its Impact on SMTP Traffic Blocking Policies
+4198	, compared to traditional approaches Simplifying Virtual Network Embedding: Path Splitting, Migration, and Customized Algorithms for Efficient Resource Utilization
+4199	Efficient Per-Flow Traffic Measurement Using Space-Code Bloom Filters at High-Speed Networks

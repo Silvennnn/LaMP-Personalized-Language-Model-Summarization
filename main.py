@@ -6,7 +6,21 @@ import time
 import evaluation
 import gpt
 
-
+def summary_file_loader(summaryFilePath):
+    summaryFile = open(summaryFilePath, 'r')
+    summary_dict = {} # key = queryID, value = list of [{"text", "title"}]
+    for line in summaryFile.readlines():
+        elements = line.split('\t')
+        queryId = elements[0]
+        profileId = elements[1]
+        summaryTitle = elements[2]
+        summaryText = elements[3]
+        dict_item = {"profileId": profileId, "text": summaryText, "title": summaryTitle}
+        if queryId not in summary_dict:
+            summary_dict[queryId] = [dict_item]
+        else:
+            summary_dict[queryId].append(dict_item)
+    return summary_dict
 def news_headline_input_json_data_processor(inputFilePath):
     input_dict = {}
     inputFile = open(inputFilePath, 'r')
@@ -48,14 +62,14 @@ def news_headline_output_json_data_processor(outputFilePath):
         output_dict[queryId] = queryOutput
     return output_dict
 
-def query_task_generator(inputText, task):
-    if task == 'news_headline':
-        return news_headline_query_generate(inputText)
-    elif task == 'scholarly_title':
-        return scholarly_title_query_generate(inputText)
-    else:
-        print("Task Error")
-        return None
+# def query_task_generator(inputText, task):
+#     if task == 'news_headline':
+#         return news_headline_query_generate(inputText)
+#     elif task == 'scholarly_title':
+#         return scholarly_title_query_generate(inputText)
+#     else:
+#         print("Task Error")
+#         return None
 
 def news_headline_query_generate(inputText):
     query = "Generate a headline for the following article: {}".format(inputText)
@@ -68,10 +82,11 @@ def scholarly_title_input_json_data_processor(inputFilePath):
     inputData = json.load(inputFile)
 
     for index, element in enumerate(inputData): # List of query [{"id", "input", "profile"}]
-        # if index == 10:  # TODO: Remove
-        #     break
+        if index == 100:  # TODO: Remove
+            break
         queryId = element['id']
         queryInput = element["input"]
+        # print(queryInput)
         queryProfile = element["profile"] # List of profile [{"title", "abstract", "id"}]
         queryProfile_dict = {}
         for profile in element["profile"]:
@@ -96,8 +111,8 @@ def scholarly_title_output_json_data_processor(outputFilePath):
     outputData = json.load(outputFile)["golds"]  # List of query output [{"id", "output"} ... ]
 
     for index, element in enumerate(outputData):
-        # if index == 10:  # TODO: Remove
-        #     break
+        if index == 100:  # TODO: Remove
+            break
         queryId = element['id']
         queryOutput = element["output"]
         output_dict[queryId] = queryOutput
@@ -108,86 +123,86 @@ def scholarly_title_query_generate(inputText):
     query = "Generate a title for the following abstract of a paper: {}".format(inputText)
     return query
 
-def BM25_index_prepare_V1(profiles, task):
-    """
-    :param profiles: list of profile [{"text", "title", "id"} ... ]
-    :return: index: dict {
-                        "term": {
-                            "profileID": count
-                        }
-                    },
-            total_term_count: number of terms in profiles list,
-            avg_profile_length: average length of profile's text,
-            profile_length_dict: dict {
-                                            "profileID": length of text
-                                        }
-    """
-    index = {}
-    total_term_count = 0
-    profile_length_dict = {}
-    for profile in profiles:
-        profile_id = profile["id"]
-        if task == "news_headline":
-            title = profile["title"]
-            text = profile["text"]
-        elif task == "scholarly_title":
-            title = profile["title"]
-            text = profile["abstract"]
-        terms_lst = text.split()
-        profile_length_dict[profile_id] = len(terms_lst)
-        total_term_count += len(terms_lst)
-        for term in terms_lst:
-            if term not in index: # if the term not exist in the index
-                index[term] = {}
-                index[term][profile_id] = 1
-                index[term]["total"] = 1
-            else: # if the term already exist
-                if profile_id not in index[term]: # if the doc_id not in index[term] --> initialize to 1
-                    index[term][profile_id] = 1
-                    index[term]["total"] = 1
-                else:
-                    index[term][profile_id] += 1
-                    index[term]["total"] += 1
-    avg_profile_length = total_term_count / len(profile)
-    return index, total_term_count, avg_profile_length, profile_length_dict
+# def BM25_index_prepare_V1(profiles, task):
+#     """
+#     :param profiles: list of profile [{"text", "title", "id"} ... ]
+#     :return: index: dict {
+#                         "term": {
+#                             "profileID": count
+#                         }
+#                     },
+#             total_term_count: number of terms in profiles list,
+#             avg_profile_length: average length of profile's text,
+#             profile_length_dict: dict {
+#                                             "profileID": length of text
+#                                         }
+#     """
+#     index = {}
+#     total_term_count = 0
+#     profile_length_dict = {}
+#     for profile in profiles:
+#         profile_id = profile["id"]
+#         if task == "news_headline":
+#             title = profile["title"]
+#             text = profile["text"]
+#         elif task == "scholarly_title":
+#             title = profile["title"]
+#             text = profile["abstract"]
+#         terms_lst = text.split()
+#         profile_length_dict[profile_id] = len(terms_lst)
+#         total_term_count += len(terms_lst)
+#         for term in terms_lst:
+#             if term not in index: # if the term not exist in the index
+#                 index[term] = {}
+#                 index[term][profile_id] = 1
+#                 index[term]["total"] = 1
+#             else: # if the term already exist
+#                 if profile_id not in index[term]: # if the doc_id not in index[term] --> initialize to 1
+#                     index[term][profile_id] = 1
+#                     index[term]["total"] = 1
+#                 else:
+#                     index[term][profile_id] += 1
+#                     index[term]["total"] += 1
+#     avg_profile_length = total_term_count / len(profile)
+#     return index, total_term_count, avg_profile_length, profile_length_dict
 
-def BM25_V1(query, profiles_lst, profiles_dict, k1=1.2, b=0.75, task=None):
-    """
-    :param profiles_dict: dict of profiles {profileID: {"text":str, "title": str}}
-    :param b: int
-    :param query: string
-    :param profiles_lst: list of profiles
-    :param k1: int
-    :return: result: list of sorted tuples [(profileID, bm25 score)]
-    """
-    bm25_score_dict = {}
-    index, total_term_count, avg_profile_length, profile_length_dict = BM25_index_prepare(profiles_lst, task)
-    for query_term in query.split():
-        for profile in profiles_lst:
-            profile_id = profile["id"]
-            if query_term in index:
-                df_t = index[query_term]["total"]
-                if profile_id in index[query_term]: # if the profile contain the term
-                    tf_t_d = index[query_term][profile_id]
-                else: # if not exist
-                    tf_t_d = 0
-            else: # if not exist
-                df_t = 0
-                tf_t_d = 0
-            d_length = profile_length_dict[profile_id]
-            N = total_term_count
-
-            first_part = ((k1 + 1) * tf_t_d)/(k1 * (1 - b + b * (d_length / avg_profile_length)) + tf_t_d)
-            second_part = math.log((N - df_t + 0.5) / (df_t + 0.5))
-            cur_score = first_part * second_part
-            # print(query_term, profile_id, cur_score)
-            if profile_id not in bm25_score_dict:
-                bm25_score_dict[profile_id] = cur_score
-            else:
-                bm25_score_dict[profile_id] += cur_score
-    bm25_score_lst = list(bm25_score_dict.items())
-    bm25_score_lst.sort(key= lambda x: x[1], reverse=True)
-    return bm25_score_lst
+# def BM25_V1(query, profiles_lst, profiles_dict, k1=1.2, b=0.75, task=None):
+#     """
+#     :param profiles_dict: dict of profiles {profileID: {"text":str, "title": str}}
+#     :param b: int
+#     :param query: string
+#     :param profiles_lst: list of profiles
+#     :param k1: int
+#     :return: result: list of sorted tuples [(profileID, bm25 score)]
+#     """
+#     bm25_score_dict = {}
+#     index, total_term_count, avg_profile_length, profile_length_dict = BM25_index_prepare(profiles_lst, task)
+#     for query_term in query.split():
+#         for profile in profiles_lst:
+#             profile_id = profile["id"]
+#             if query_term in index:
+#                 df_t = index[query_term]["total"]
+#                 if profile_id in index[query_term]: # if the profile contain the term
+#                     tf_t_d = index[query_term][profile_id]
+#                 else: # if not exist
+#                     tf_t_d = 0
+#             else: # if not exist
+#                 df_t = 0
+#                 tf_t_d = 0
+#             d_length = profile_length_dict[profile_id]
+#             N = total_term_count
+#
+#             first_part = ((k1 + 1) * tf_t_d)/(k1 * (1 - b + b * (d_length / avg_profile_length)) + tf_t_d)
+#             second_part = math.log((N - df_t + 0.5) / (df_t + 0.5))
+#             cur_score = first_part * second_part
+#             # print(query_term, profile_id, cur_score)
+#             if profile_id not in bm25_score_dict:
+#                 bm25_score_dict[profile_id] = cur_score
+#             else:
+#                 bm25_score_dict[profile_id] += cur_score
+#     bm25_score_lst = list(bm25_score_dict.items())
+#     bm25_score_lst.sort(key= lambda x: x[1], reverse=True)
+#     return bm25_score_lst
 
 def BM25_preprocess_V2(input_data_dict):
     term_document_frequency_index = {}
@@ -302,6 +317,7 @@ def BM25_V2(query, profiles_lst, profiles_dict, avg_doc_length, document_frequen
                 bm25_score_dict[profile_id] += cur_score
     bm25_score_lst = list(bm25_score_dict.items())
     bm25_score_lst.sort(key= lambda x: x[1], reverse=True)
+    # print(bm25_score_lst)
     return bm25_score_lst
 
 def summarization_generate(taskName, outputPath, method='GPT', bm25_top_k=1):
@@ -359,7 +375,7 @@ def summarization_generate(taskName, outputPath, method='GPT', bm25_top_k=1):
 
     for query_id, query_elements in train_input_data_dict.items():
         print("------------ Current Process: {} -----------".format(query_id))
-        query_input = query_task_generator(task=taskName, inputText=query_elements["queryInput"])
+        query_input = query_elements["queryInput"]
         query_ProfileList = query_elements["queryProfile"]
         query_ProfileDict = query_elements["queryProfileDict"]
         query_BM25_result = BM25_V2(query_input, query_ProfileList, query_ProfileDict, avg_document_length, term_document_frequency_dict, collection_term_count, taskName)
@@ -374,8 +390,8 @@ def summarization_generate(taskName, outputPath, method='GPT', bm25_top_k=1):
             if not exist:
                 input_text = query_ProfileDict[profile_id]
                 summary = gpt.gpt_process(input_text, task="summary")
-
-            line = "{}\t{}\t{}\n".format(query_id, profile_id, summary)
+            title = query_ProfileDict[profile_id]['title']
+            line = "{}\t{}\t{}\t{}\n".format(query_id, profile_id, title, summary.replace('\n', ''))
             outputFile.write(line)
             if not exist:
                 libFile.write(line)
@@ -386,7 +402,7 @@ def summarization_generate(taskName, outputPath, method='GPT', bm25_top_k=1):
 
 
 def main(task_name="news_headline", k=1, outputPath=None):
-    if task_name == 'news_headline' or 'scholarly_title':
+    if task_name == 'news_headline' or task_name == 'scholarly_title':
         print('----------- data loading ------------')
         if task_name == "news_headline":
             data_dir = "Data/news_headline"
@@ -449,12 +465,14 @@ def main(task_name="news_headline", k=1, outputPath=None):
                 print("{} already exist".format(query_id))
                 gpt_result_dict[query_id] = lib[query_id]
                 continue
-            query_input = query_task_generator(task=task_name, inputText=query_elements["queryInput"]).replace('\n', '')
+            query_input = query_elements['queryInput']
             query_ProfileList = query_elements["queryProfile"]
             query_ProfileDict = query_elements["queryProfileDict"]
             query_BM25_result = BM25_V2(query_input, query_ProfileList, query_ProfileDict, avg_document_length, term_document_frequency_dict, collection_term_count, task_name) # TODO: replace to dynamic
             # query_BM25_result = BM25_V1(query_input, query_ProfileList, query_ProfileDict, task=task_name)
             # print(query_BM25_result)
+
+            # print(query_elements["queryInput"])
             query_selected_profile = []
             for i in range(k):
                 profile_id = query_BM25_result[i][0]
@@ -465,20 +483,73 @@ def main(task_name="news_headline", k=1, outputPath=None):
             line = str(query_id) + '\t' + query_gpt_result + '\n'
             outputFile.write(line)
 
-        # print("------------ Begin Evaluation -----------")
-        # ROUGE_1, ROUGE_L = evaluation.evaluation(train_output_data_dict, gpt_result_dict)
-        # print("ROUGE_1: {}".format(ROUGE_1))
-        # print("ROUGE_L: {}".format(ROUGE_L))
-        # print("------------ End Evaluation -----------")
-
         print("------------ Begin Evaluation -----------")
         result = evaluation.evaluation(train_output_data_dict, gpt_result_dict)
         print("ROUGE_1: {}".format(result["rouge-1"]))
         print("ROUGE_L: {}".format(result["rouge-L"]))
         print("------------ End Evaluation -----------")
 
-    # else: # Summary Task
+    else: # Summary Task
+        print('----------- data loading ------------')
+        if task_name == "news_headline_summary":
+            summary_data_dir = "Data/summary"
+            train_data_dir = "Data/news_headline"
 
+            summary_input_path = os.path.join(summary_data_dir, "news_headline_summary_k={}".format(k))
+            summary_input_data_dict = summary_file_loader(summary_input_path)
+
+            train_input_path = os.path.join(train_data_dir, "dev_questions.json")
+            train_output_path = os.path.join(train_data_dir, "dev_outputs.json")
+
+            train_input_data_dict = scholarly_title_input_json_data_processor(train_input_path)
+            train_output_data_dict = news_headline_output_json_data_processor(train_output_path)
+        elif task_name == "scholarly_title_summary":
+            summary_data_dir = "Data/summary"
+            train_data_dir = "Data/scholarly_title"
+
+            summary_input_path = os.path.join(summary_data_dir, "scholarly_title_summary_k={}".format(k))
+            summary_input_data_dict = summary_file_loader(summary_input_path)
+
+            train_input_path = os.path.join(train_data_dir, "dev_questions.json")
+            train_output_path = os.path.join(train_data_dir, "dev_outputs.json")
+
+            train_input_data_dict = scholarly_title_input_json_data_processor(train_input_path)
+            train_output_data_dict = scholarly_title_output_json_data_processor(train_output_path)
+        else:
+            print("Task Not Exist")
+
+        outputFile = open(outputPath, 'r')
+        lines = outputFile.readlines()
+        lib = {}
+        for line in lines:
+            elements = line.split('\t')
+            # print(elements)
+            queryID = elements[0]
+            result = elements[1]
+            if result:
+                lib[queryID] = result
+        outputFile.close()
+        outputFile = open(outputPath, 'a')
+        gpt_result_dict = {}
+
+        for query_id, summary_profiles_lst in summary_input_data_dict.items():
+            print("------------ Current Process: {} -----------".format(query_id))
+            if query_id in lib:
+                print("{} already exist".format(query_id))
+                gpt_result_dict[query_id] = lib[query_id]
+                continue
+            query_input = train_input_data_dict[query_id]["queryInput"]
+            query_gpt_result = gpt.gpt_process(query_input, profiles=summary_profiles_lst, task=task_name).replace(
+                '"', '')
+            gpt_result_dict[query_id] = query_gpt_result
+            line = str(query_id) + '\t' + query_gpt_result + '\n'
+            outputFile.write(line)
+
+        print("------------ Begin Evaluation -----------")
+        result = evaluation.evaluation(train_output_data_dict, gpt_result_dict)
+        print("ROUGE_1: {}".format(result["rouge-1"]))
+        print("ROUGE_L: {}".format(result["rouge-L"]))
+        print("------------ End Evaluation -----------")
 
 
 
@@ -488,15 +559,16 @@ def main(task_name="news_headline", k=1, outputPath=None):
 
 if __name__ == "__main__":
     task = "scholarly_title" # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
-    #  ************************* Title Prediction Task ****************************
+     # ************************* Title Prediction Task ****************************
     output_path = 'GPT_output'
     print("************ Task: {} Begin ************ ".format(task))
-    main(task, 1, output_path)
+    main(task_name=task, k=1, outputPath=output_path)
     print("************ Task: {} End ************".format(task))
 
 
     # ************************* Summary Generate Task ****************************
-    # output_path = 'Data/summary/{}_summary'.format(task)
-    # summarization_generate(task, output_path)
+    # task = "scholarly_title"
+    # output_path = 'Data/summary/{}_summary_k=1'.format(task)
+    # summarization_generate(task, output_path, bm25_top_k=1)
 
 
