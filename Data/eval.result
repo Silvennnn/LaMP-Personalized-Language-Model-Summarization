@@ -13,3 +13,8 @@ scholarly_title summary k=1
 bm25-v2 -> GPT_output_summary_k=1
 ROUGE_1: 0.30109856061921003
 ROUGE_L: 0.24472979122940006
+**************************************************************
+scholarly_title summary k=2
+bm25-v2 -> GPT_output_summary_k=2
+ROUGE_1: 0.3913239174958214
+ROUGE_L: 0.32309254772332674

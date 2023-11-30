@@ -82,8 +82,8 @@ def scholarly_title_input_json_data_processor(inputFilePath):
     inputData = json.load(inputFile)
 
     for index, element in enumerate(inputData): # List of query [{"id", "input", "profile"}]
-        if index == 100:  # TODO: Remove
-            break
+        # if index == 100:  # TODO: Remove
+        #     break
         queryId = element['id']
         queryInput = element["input"]
         # print(queryInput)
@@ -111,8 +111,8 @@ def scholarly_title_output_json_data_processor(outputFilePath):
     outputData = json.load(outputFile)["golds"]  # List of query output [{"id", "output"} ... ]
 
     for index, element in enumerate(outputData):
-        if index == 100:  # TODO: Remove
-            break
+        # if index == 100:  # TODO: Remove
+        #     break
         queryId = element['id']
         queryOutput = element["output"]
         output_dict[queryId] = queryOutput
@@ -558,17 +558,17 @@ def main(task_name="news_headline", k=1, outputPath=None):
 
 
 if __name__ == "__main__":
-    task = "scholarly_title" # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
-     # ************************* Title Prediction Task ****************************
-    output_path = 'GPT_output'
-    print("************ Task: {} Begin ************ ".format(task))
-    main(task_name=task, k=1, outputPath=output_path)
-    print("************ Task: {} End ************".format(task))
+    # task = "scholarly_title_summary" # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
+    #  # ************************* Title Prediction Task ****************************
+    # output_path = 'GPT_output'
+    # print("************ Task: {} Begin ************ ".format(task))
+    # main(task_name=task, k=3, outputPath=output_path)
+    # print("************ Task: {} End ************".format(task))
 
 
     # ************************* Summary Generate Task ****************************
-    # task = "scholarly_title"
-    # output_path = 'Data/summary/{}_summary_k=1'.format(task)
-    # summarization_generate(task, output_path, bm25_top_k=1)
+    task = "scholarly_title"
+    output_path = 'Data/summary/{}_summary_k=1'.format(task)
+    summarization_generate(task, output_path, bm25_top_k=1)
 
 

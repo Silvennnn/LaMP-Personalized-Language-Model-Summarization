@@ -90,7 +90,7 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
     return prompt
 
 def gpt_summarize_prompt_construct(text):
-    prompt = "Please summarize the following content in about 100 words: ".format(text)
+    prompt = "Please summarize the following content in about 100 words: {}".format(text)
     return prompt
 
 # def gpt_summarize_process(input_text):
