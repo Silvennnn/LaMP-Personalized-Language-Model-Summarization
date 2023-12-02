@@ -46,7 +46,7 @@ def gpt_process(input_x, profiles=None, task=None):
     elif task == 'summary':
         prompt = gpt_summarize_prompt_construct(input_x)
         print("prompt:", prompt)
-        gpt_response = gpt_api_send(prompt, maxToken=512)
+        gpt_response = gpt_api_send(prompt, maxToken=300)
     else:
         print("Task Undefined")
     print(gpt_response)
@@ -90,7 +90,11 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
     return prompt
 
 def gpt_summarize_prompt_construct(text):
-    prompt = "Please summarize the following content in about 100 words: {}".format(text)
+    tokens = text.split()
+    if len(tokens) > 2000:
+        tokens = tokens[:2000]
+    content_text = ' '.join(tokens)
+    prompt = "Please summarize the following content in about 100 words: {}".format(content_text)
     return prompt
 
 # def gpt_summarize_process(input_text):
