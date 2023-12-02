@@ -94,7 +94,8 @@ def gpt_summarize_prompt_construct(text):
     if len(tokens) > 2000:
         tokens = tokens[:2000]
     content_text = ' '.join(tokens)
-    prompt = "Please summarize the following content in about 100 words: {}".format(content_text)
+    prompt = "Please summarize the following content: {}".format(content_text)
+    # prompt = "Please summarize the following content in about 100 words: {}".format(content_text)
     return prompt
 
 # def gpt_summarize_process(input_text):
