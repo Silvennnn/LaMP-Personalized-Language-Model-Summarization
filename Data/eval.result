@@ -9,12 +9,24 @@ bm25-v2 -> GPT_output_BM25_version_2
 ROUGE_1: 0.3654904314309864
 ROUGE_L: 0.29811562930171853
 **************************************************************
-scholarly_title summary k=1
+scholarly_title summary k=1 incorrect
 bm25-v2 -> GPT_output_summary_k=1
 ROUGE_1: 0.30109856061921003
 ROUGE_L: 0.24472979122940006
 **************************************************************
-scholarly_title summary k=2
+scholarly_title summary k=2 incorrect
 bm25-v2 -> GPT_output_summary_k=2
 ROUGE_1: 0.3913239174958214
 ROUGE_L: 0.32309254772332674
+**************************************************************
+scholarly_title summary k=1 with 300 datas
+ROUGE_1: 0.40651088044310557
+ROUGE_L: 0.33026205096697914
+**************************************************************
+scholarly_title summary k=2 with 300 datas
+ROUGE_1: 0.4190201149161661
+ROUGE_L: 0.34128134326045445
+**************************************************************
+scholarly_title_summary k=1 flanT5-base all datas
+ROUGE_1: 0.37575255648810213
+ROUGE_L: 0.33888445757698094
