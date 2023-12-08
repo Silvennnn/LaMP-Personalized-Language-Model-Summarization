@@ -4,6 +4,7 @@ import os.path
 import time
 
 import evaluation
+import flanT5
 import gpt
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
@@ -98,6 +99,9 @@ def scholarly_title_input_json_data_processor(inputFilePath):
             profile_id = profile["id"]
             profile_title = profile["title"]
             profile_text = profile["abstract"]
+            if profile_id == '4117467':
+                profile_text = profile_text[:400]
+
             queryProfile_dict[profile_id] = {}
             queryProfile_dict[profile_id]["title"] = profile_title
             queryProfile_dict[profile_id]["text"] = profile_text
@@ -392,7 +396,8 @@ def summarization_generate(taskName, outputPath, method='GPT', bm25_top_k=1):
     libFile = open(lib_path, 'a')
 
     # BM25 Preprocess
-    term_document_frequency_dict, collection_term_count, avg_document_length = BM25_preprocess_V2(train_input_data_dict, task=taskName)
+    term_document_frequency_dict, collection_term_count, avg_document_length = BM25_preprocess_V2(train_input_data_dict,
+                                                                                                  task=taskName)
 
     for query_id, query_elements in train_input_data_dict.items():
         print("------------ Current Process: {} -----------".format(query_id))
@@ -447,8 +452,8 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
             train_output_data_dict = news_headline_output_json_data_processor(train_output_path)
         elif task_name == "scholarly_title":
             data_dir = "Data/scholarly_title"
-            train_input_path = os.path.join(data_dir, "dev_questions.json")
-            train_output_path = os.path.join(data_dir, "dev_outputs.json")
+            train_input_path = os.path.join(data_dir, "train_questions.json")
+            train_output_path = os.path.join(data_dir, "train_outputs.json")
             train_input_data_dict = scholarly_title_input_json_data_processor(train_input_path)
             train_output_data_dict = scholarly_title_output_json_data_processor(train_output_path)
         else:
@@ -476,7 +481,7 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
         print("------------ BM25 Preprocessing Begin -----------")
         # BM25 Preprocess
         term_document_frequency_dict, collection_term_count, avg_document_length = BM25_preprocess_V2(
-            train_input_data_dict)
+            train_input_data_dict, task=task_name)
         print("collection total term count: {}".format(collection_term_count))
         print("average document length: {}".format(avg_document_length))
         print("------------ BM25 Preprocessing End -----------")
@@ -501,11 +506,37 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
             for i in range(k):
                 profile_id = query_BM25_result[i][0]
                 query_selected_profile.append(query_ProfileDict[profile_id])
-            query_gpt_result = gpt.gpt_process(query_input, profiles=query_selected_profile, task=task_name).replace(
-                '"', '')
+
             # time.sleep(2)
-            gpt_result_dict[query_id] = query_gpt_result
-            line = str(query_id) + '\t' + query_gpt_result + '\n'
+            if language_model == 'gpt':
+                query_result = gpt.gpt_process(query_input, profiles=query_selected_profile,
+                                               task=task_name).replace(
+                    '"', '')
+            elif language_model == 'flan_t5_base':
+                input_text = gpt.gpt_title_generate_prompt_construct(query_input, profiles=query_selected_profile,
+                                                                     task=task_name)
+                print('Input: ', input_text)
+                input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
+                outputs = model.generate(input_ids, max_length=128)
+                query_result = tokenizer.decode(outputs[0]).replace("<pad>", "").replace("</s>", "").replace("<unk>",
+                                                                                                             "")
+                print('Output: ', query_result)
+            elif language_model == 'flan_t5_xxl':
+                input_text = gpt.gpt_title_generate_prompt_construct(query_input, profiles=query_selected_profile,
+                                                                     task=task_name)
+                tokens = input_text.split()
+                if len(tokens) >= 700:
+                    print("TOO LONG")
+                    tokens = tokens[:700]
+                if query_id == '41214':
+                    tokens = tokens[:300]
+                input_text = ' '.join(tokens)
+                print('Input: ', input_text)
+                query_result = flanT5.query(input_text)[0]["generated_text"]
+                print("Output: ", query_result)
+
+            gpt_result_dict[query_id] = query_result
+            line = str(query_id) + '\t' + query_result + '\n'
             outputFile.write(line)
 
         print("------------ Begin Evaluation -----------")
@@ -526,7 +557,7 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
             train_input_path = os.path.join(train_data_dir, "dev_questions.json")
             train_output_path = os.path.join(train_data_dir, "dev_outputs.json")
 
-            train_input_data_dict = scholarly_title_input_json_data_processor(train_input_path)
+            train_input_data_dict = news_headline_input_json_data_processor(train_input_path)
             train_output_data_dict = news_headline_output_json_data_processor(train_output_path)
         elif task_name == "scholarly_title_summary":
             summary_data_dir = "Data/summary"
@@ -540,7 +571,6 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
 
             train_input_data_dict = scholarly_title_input_json_data_processor(train_input_path)
             train_output_data_dict = scholarly_title_output_json_data_processor(train_output_path)
-            print(train_input_data_dict["41300"])
         else:
             print("Task Not Exist")
 
@@ -571,7 +601,7 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
                                                                      task=task_name)
                 print('Input: ', input_text)
                 input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
-                outputs = model.generate(input_ids)
+                outputs = model.generate(input_ids, max_length=128)
                 query_result = tokenizer.decode(outputs[0])
                 print('Output: ', query_result)
             else:
@@ -589,20 +619,20 @@ def main(task_name="news_headline", k=1, outputPath=None, language_model="gpt"):
 
 
 if __name__ == "__main__":
-    # task = "scholarly_title"  # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
-    # LLM = 'gpt'  # model = 'gpt' or 'flan_t5_base'
-    # # ************************* Title Prediction Task ****************************
-    # output_path = 'GPT_output'
-    # # output_path = 'flan_t5_output'
-    # print("************ Task: {} Begin ************ ".format(task))
-    # main(task_name=task, k=1, outputPath=output_path, language_model=LLM)
-    # print("************ Task: {} End ************".format(task))
+    task = "scholarly_title"  # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
+    LLM = 'gpt'  # model = 'gpt' or 'flan_t5_base' or 'flan_t5_xxl'
+    # ************************* Title Prediction Task ****************************
+    output_path = 'GPT_output'
+    # output_path = 'flan_t5_output'
+    print("************ Task: {} Begin ************ ".format(task))
+    main(task_name=task, k=0, outputPath=output_path, language_model=LLM)
+    print("************ Task: {} End ************".format(task))
 
     # ************************* Summary Generate Task ****************************
-    LLM = 'gpt' # model = 'gpt' or 'flan_t5_base'
-    task = "news_headline"
-    # task = "scholarly_title"
-    output_path = 'Data/summary/{}_summary_k=1'.format(task)
-    summarization_generate(task, output_path, method=LLM, bm25_top_k=1)
+    # LLM = 'gpt' # model = 'gpt' or 'flan_t5_base'
+    # task = "news_headline"
+    # # task = "scholarly_title"
+    # output_path = 'Data/summary/{}_summary_k=1'.format(task)
+    # summarization_generate(task, output_path, method=LLM, bm25_top_k=1)
 
 

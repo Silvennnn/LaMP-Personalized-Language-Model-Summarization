@@ -59,7 +59,11 @@ def gpt_process(input_x, profiles=None, task=None):
 def gpt_title_generate_prompt_construct(input_x, profiles, task):
     if task == "news_headline" or task == "news_headline_summary":
         # prompt = 'Generate a headline for the following article: "{}"\nFor example, '.format(input_x)
-        prompt = '{}\nFor example, '.format(input_x)
+        # prompt = '{}\nFor example, '.format(input_x)
+        if len(profiles) == 0:
+            prompt = input_x
+        else:
+            prompt = 'For example, '.format(input_x)
         # prompt = "Generate a headline for the following article: {}\n".format(input_x)
         for profile in profiles:
             profile_text = profile['text'].split()
@@ -68,23 +72,27 @@ def gpt_title_generate_prompt_construct(input_x, profiles, task):
             profile_text = ' '.join(profile_text)
             profile_line = '"{}" is the title for "{}"\n'.format(profile['title'], profile_text)
             prompt += profile_line
+        prompt = prompt + '\n{}'.format(input_x)
     elif task == "scholarly_title" or task == "scholarly_title_summary":
         # prompt = '{}\nFor example, '.format(input_x)
-        prompt = 'For example, '
-        # prompt = 'Based on the example, generate a title for the following abstract of a paper: "{}"\nFor example, '.format(input_x)
-        # prompt = "Generate a title for the following abstract of a paper: {}\n".format(input_x)
-        for profile in profiles:
-            profile_text = profile['text'].split()
-            if len(profile_text) > 2000:
-                print("here")
-                print(len(profile_text))
-                profile_text = profile_text[:2000]
-                print(len(profile_text))
-            # print(profile['title'])
-            profile_text = ' '.join(profile_text)
-            profile_line = '"{}" is the title for "{}"\n'.format(profile['title'], profile_text)
-            prompt += profile_line
-        prompt = prompt + '\n{}'.format(input_x)
+        if len(profiles) == 0:
+            prompt = input_x
+        else:
+            prompt = 'For example, '
+            # prompt = 'Based on the example, generate a title for the following abstract of a paper: "{}"\nFor example, '.format(input_x)
+            # prompt = "Generate a title for the following abstract of a paper: {}\n".format(input_x)
+            for profile in profiles:
+                profile_text = profile['text'].split()
+                if len(profile_text) > 800:
+                    print("here")
+                    print(len(profile_text))
+                    profile_text = profile_text[:800]
+                    print(len(profile_text))
+                # print(profile['title'])
+                profile_text = ' '.join(profile_text)
+                profile_line = '"{}" is the title for "{}"\n'.format(profile['title'], profile_text)
+                prompt += profile_line
+            prompt = prompt + '\n{}'.format(input_x)
     else:
         print("Task Undefined")
     return prompt

@@ -1,10 +1,18 @@
-from transformers import T5Tokenizer, T5ForConditionalGeneration
+import requests
 
-tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xxl")
-model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xxl")
+API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-xxl"
+API_TOKEN = "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"
+headers = {"Authorization": f"Bearer {API_TOKEN}"}
+def query(input_text):
+    payload = {
+        "inputs": input_text,
+        "max_length": 128
+    }
+    response = requests.post(API_URL, headers=headers, json=payload)
+    print(response.json())
+    return response.json()
 
-input_text = "translate English to German: How old are you?"
-input_ids = tokenizer(input_text, return_tensors="pt").input_ids
 
-outputs = model.generate(input_ids)
-print(tokenizer.decode(outputs[0]))
+# output = query("Generate a weather report")[0]["generated_text"]
+#
+# print(output)
