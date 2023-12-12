@@ -622,7 +622,7 @@ if __name__ == "__main__":
     task = "scholarly_title"  # news_headline or scholarly_title or news_headline_summary or scholarly_title_summary
     LLM = 'gpt'  # model = 'gpt' or 'flan_t5_base' or 'flan_t5_xxl'
     # ************************* Title Prediction Task ****************************
-    output_path = 'GPT_output'
+    output_path = 'Data/output/GPT_output'
     # output_path = 'flan_t5_output'
     print("************ Task: {} Begin ************ ".format(task))
     main(task_name=task, k=0, outputPath=output_path, language_model=LLM)
