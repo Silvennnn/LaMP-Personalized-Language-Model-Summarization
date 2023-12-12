@@ -4,7 +4,7 @@ import requests
 
 def gpt_api_send(prompt, temperature=0.7, maxToken=None):
     # Set your OpenAI API key
-    OPENAI_API_KEY = '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'
+    OPENAI_API_KEY = ''
 
     # Define the endpoint URL
     url = 'https://api.openai.com/v1/completions'
